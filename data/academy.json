@@ -1,0 +1,37 @@
+{
+  "descripcion": "Capacitación para practicantes y asistentes: cursos por área, módulos progresivos, evaluaciones y una ruta de aprendizaje recomendada.",
+  "ruta": [
+    {
+      "fase": "Fase 1 · Fundamentos",
+      "descripcion": "Conceptos base de contabilidad y tributación antes de operar con documentos reales.",
+      "items": ["c01", "c05", "t01", "t18"]
+    },
+    {
+      "fase": "Fase 2 · Operación contable",
+      "descripcion": "Registro de operaciones y control de bancos.",
+      "items": ["c02", "c03", "c04", "c06"]
+    },
+    {
+      "fase": "Fase 3 · Obligaciones tributarias y registros",
+      "descripcion": "Registros electrónicos, detracciones y declaraciones.",
+      "items": ["t08", "t10", "t11", "t12", "t13"]
+    },
+    {
+      "fase": "Fase 4 · Planillas y obligaciones laborales",
+      "descripcion": "Contratos, T-Registro, planillas y beneficios.",
+      "items": ["l01", "l03", "l04", "l05", "l09"]
+    },
+    {
+      "fase": "Fase 5 · Cierre, control y reportes",
+      "descripcion": "Análisis de cuentas, cierre mensual y estados financieros.",
+      "items": ["c07", "c08", "c09", "c10", "t14"]
+    }
+  ],
+  "recomendaciones": [
+    "Estudie los módulos en el orden de la ruta de aprendizaje.",
+    "Resuelva los ejercicios antes de abrir la solución sugerida.",
+    "Contraste siempre lo aprendido con la fuente oficial citada en cada módulo.",
+    "Ante una duda sobre un cliente real, consulte al contador responsable; no use datos reales en esta plataforma.",
+    "Repita las evaluaciones en las que obtenga menos del puntaje mínimo."
+  ]
+}

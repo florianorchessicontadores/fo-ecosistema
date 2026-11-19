@@ -1,0 +1,12 @@
+{
+  "descripcion": "Espacio para organizar manuales, procedimientos, formatos, checklists, modelos y material de capacitación. Admite documentos PDF y material gráfico.",
+  "categorias": [
+    { "id": "manuales-contasis", "titulo": "Manuales de Contasis", "icono": "biblioteca", "descripcion": "Manuales de uso del sistema Contasis elaborados o autorizados por el estudio.", "carpeta": "assets/docs/manuales-contasis/", "documentos": [] },
+    { "id": "procedimientos-internos", "titulo": "Procedimientos internos", "icono": "list", "descripcion": "Procedimientos de trabajo del estudio, redactados sin datos de clientes.", "carpeta": "assets/docs/procedimientos-internos/", "documentos": [] },
+    { "id": "formatos-de-trabajo", "titulo": "Formatos de trabajo", "icono": "file", "descripcion": "Formatos y plantillas de uso interno.", "carpeta": "assets/docs/formatos-de-trabajo/", "documentos": [] },
+    { "id": "checklists", "titulo": "Checklists", "icono": "check", "descripcion": "Listas de verificación para cierres, declaraciones y planillas.", "carpeta": "assets/docs/checklists/", "documentos": [] },
+    { "id": "modelos-de-documentos", "titulo": "Modelos de documentos", "icono": "file", "descripcion": "Modelos de cartas, contratos y comunicaciones, siempre sin información real.", "carpeta": "assets/docs/modelos-de-documentos/", "documentos": [] },
+    { "id": "guias-operativas", "titulo": "Guías operativas", "icono": "route", "descripcion": "Guías paso a paso de tareas recurrentes del estudio.", "carpeta": "assets/docs/guias-operativas/", "documentos": [] },
+    { "id": "material-de-capacitacion", "titulo": "Material de capacitación", "icono": "academy", "descripcion": "Presentaciones, videos y material gráfico de apoyo a FO Academy.", "carpeta": "assets/docs/material-de-capacitacion/", "documentos": [] }
+  ]
+}

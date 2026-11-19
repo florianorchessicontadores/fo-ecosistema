@@ -1,0 +1,192 @@
+{
+  "area": "contable",
+  "intro": "Espacio de aprendizaje por módulos para el trabajo contable del estudio. Los módulos de fundamentos tienen contenido inicial; los módulos de Contasis requieren incorporar los procedimientos y capturas propios del estudio.",
+  "normas_marco": ["pcge", "libros-sunat"],
+  "items": [
+    {
+      "id": "c01",
+      "numero": 1,
+      "titulo": "Introducción a la contabilidad empresarial",
+      "estado": "desarrollado",
+      "fecha_elaboracion": "2026-11-18",
+      "ultima_revision": null,
+      "resumen": "Qué es la contabilidad, la ecuación patrimonial, la partida doble y el ciclo contable básico.",
+      "objetivo": "Comprender qué es la contabilidad, para qué sirve en una empresa y cuál es el ciclo básico de registro, de modo que el practicante pueda ubicar cada tarea del estudio dentro del proceso contable.",
+      "explicacion": [
+        { "titulo": "Qué es la contabilidad", "texto": "Es el sistema que identifica, mide, registra y comunica información económica de una entidad para que gerencia, socios, entidades financieras y administración tributaria puedan tomar decisiones." },
+        { "titulo": "La ecuación patrimonial", "texto": "Activo = Pasivo + Patrimonio. El activo son los recursos que controla la empresa; el pasivo, sus obligaciones con terceros; el patrimonio, el aporte de los propietarios más los resultados acumulados." },
+        { "titulo": "La partida doble", "texto": "Todo hecho económico se registra con el mismo monto en el debe y en el haber. Por eso cada asiento queda balanceado y la ecuación patrimonial se mantiene." },
+        { "titulo": "El ciclo contable básico", "texto": "Documento fuente, análisis de la operación, asiento en el libro diario, mayorización, balance de comprobación, ajustes, estados financieros y cierre del periodo." },
+        { "titulo": "Marco de referencia", "texto": "Las empresas peruanas preparan su información financiera según el marco contable que les corresponde y codifican sus cuentas con el Plan Contable General Empresarial (PCGE). Qué marco aplica a cada cliente debe confirmarse con el responsable." }
+      ],
+      "procedimiento": [
+        "Reunir el documento fuente de la operación (factura, boleta, recibo, estado de cuenta).",
+        "Identificar la naturaleza de la operación y las cuentas que se afectan.",
+        "Registrar el asiento con fecha, glosa clara y montos balanceados.",
+        "Verificar que el total del debe sea igual al total del haber.",
+        "Archivar el sustento con la referencia del asiento."
+      ],
+      "ejemplos": [
+        { "titulo": "Compra de mercadería al contado (cifras ficticias, sin impuestos)", "descripcion": "La empresa compra mercadería por 1 000 soles y paga en efectivo. Aumenta el activo «Mercaderías» (debe) y disminuye el activo «Efectivo» (haber) por 1 000. El total del activo no cambia." },
+        { "titulo": "Préstamo bancario (cifras ficticias)", "descripcion": "La empresa recibe 5 000 soles de un banco. Aumenta el activo «Efectivo» (debe) y aumenta el pasivo «Obligación financiera» (haber) por 5 000. La ecuación patrimonial se mantiene." }
+      ],
+      "errores": [
+        "Registrar asientos sin glosa o con glosas genéricas como «varios».",
+        "Confundir la fecha de emisión del documento con la fecha de registro.",
+        "Mezclar gastos personales de los propietarios con gastos de la empresa.",
+        "Digitar montos con cifras transpuestas y no verificar que el asiento cuadre."
+      ],
+      "recomendaciones": [
+        "Pregunte siempre cuál es el documento que sustenta la operación antes de registrarla.",
+        "Mantenga el orden cronológico y numérico de los documentos.",
+        "Ante una duda sobre la naturaleza de una operación, consulte al contador responsable antes de registrar."
+      ],
+      "ejercicios": [
+        { "enunciado": "Clasifique como activo, pasivo o patrimonio: caja, cuentas por pagar a proveedores, capital social, mercaderías, préstamo bancario.", "solucion": "Activo: caja y mercaderías. Pasivo: cuentas por pagar a proveedores y préstamo bancario. Patrimonio: capital social." },
+        { "enunciado": "Los socios aportan 10 000 soles en efectivo. ¿Qué elementos de la ecuación patrimonial cambian?", "solucion": "Aumentan el activo (efectivo) y el patrimonio (capital) en 10 000 soles." }
+      ],
+      "evaluacion": [
+        { "pregunta": "Según la ecuación patrimonial, ¿cuál expresión es correcta?", "opciones": ["Activo = Pasivo − Patrimonio", "Patrimonio = Activo + Pasivo", "Activo = Pasivo + Patrimonio", "Pasivo = Activo + Patrimonio"], "correcta": 2, "explicacion": "El activo se financia con obligaciones (pasivo) y con aportes y resultados de los propietarios (patrimonio)." },
+        { "pregunta": "En la partida doble, ¿qué debe cumplirse en cada asiento?", "opciones": ["Que solo se afecte una cuenta", "Que el total del debe sea igual al total del haber", "Que el haber sea siempre mayor", "Que el pago sea en efectivo"], "correcta": 1, "explicacion": "Cada asiento registra el mismo monto en el debe y en el haber." },
+        { "pregunta": "¿Cómo se clasifica un préstamo bancario por pagar?", "opciones": ["Activo", "Patrimonio", "Ingreso", "Pasivo"], "correcta": 3, "explicacion": "Es una obligación con un tercero, por lo tanto es un pasivo." },
+        { "pregunta": "¿Qué debe respaldar a un asiento contable?", "opciones": ["Un documento fuente que sustente la operación", "Solo la memoria del contador", "Un correo sin adjuntos", "Nada, si el monto es pequeño"], "correcta": 0, "explicacion": "Todo asiento debe poder sustentarse con un documento fuente." }
+      ],
+      "normas": ["pcge"]
+    },
+    {
+      "id": "c02", "numero": 2, "titulo": "Registro de compras en Contasis", "estado": "pendiente",
+      "resumen": "Procedimiento de registro de comprobantes de compra en Contasis.",
+      "nota": "Requiere incorporar los pasos, pantallas y criterios propios del estudio. No se ha redactado para evitar describir un procedimiento que no corresponda a la versión del sistema en uso.",
+      "normas": ["libros-sunat"]
+    },
+    {
+      "id": "c03", "numero": 3, "titulo": "Registro de ventas en Contasis", "estado": "pendiente",
+      "resumen": "Procedimiento de registro de comprobantes de venta en Contasis.",
+      "nota": "Requiere incorporar los pasos, pantallas y criterios propios del estudio.",
+      "normas": ["libros-sunat"]
+    },
+    {
+      "id": "c04", "numero": 4, "titulo": "Registro de operaciones contables", "estado": "pendiente",
+      "resumen": "Asientos de diario y registro de operaciones no vinculadas a compras o ventas.",
+      "nota": "Pendiente de desarrollo.",
+      "normas": []
+    },
+    {
+      "id": "c05",
+      "numero": 5,
+      "titulo": "Plan de cuentas",
+      "estado": "desarrollado",
+      "fecha_elaboracion": "2026-11-18",
+      "ultima_revision": null,
+      "resumen": "Cómo se organiza el PCGE por elementos y cuentas, y cómo elegir la cuenta adecuada para una operación.",
+      "objetivo": "Conocer la organización del plan contable por elementos y cuentas, aprender a elegir la cuenta adecuada para una operación y proponer subcuentas internas sin alterar la estructura base.",
+      "explicacion": [
+        { "titulo": "Estructura por elementos", "texto": "El PCGE agrupa las cuentas en elementos identificados por el primer dígito: 1 Activo disponible y exigible, 2 Activo realizable, 3 Activo inmovilizado, 4 Pasivo, 5 Patrimonio, 6 Gastos por naturaleza, 7 Ingresos, 8 Saldos intermediarios de gestión y determinación del resultado del ejercicio, 9 Contabilidad analítica de explotación y 0 Cuentas de orden. Verifique estos nombres en la versión vigente del PCGE." },
+        { "titulo": "Cuenta, subcuenta y divisionaria", "texto": "Los dos primeros dígitos identifican la cuenta (por ejemplo, la 10 corresponde a Efectivo y equivalentes de efectivo). Los dígitos siguientes permiten mayor detalle." },
+        { "titulo": "Subcuentas propias de cada empresa", "texto": "Cada empresa puede desagregar las cuentas según la información que necesite, manteniendo la codificación de la cuenta base." },
+        { "titulo": "Relación con los estados financieros", "texto": "Las cuentas de los elementos 1 al 5 se reflejan en el estado de situación financiera; las de los elementos 6 y 7, junto con el 8, en el estado de resultados." }
+      ],
+      "procedimiento": [
+        "Identificar la naturaleza de la operación: ¿es un recurso, una obligación, un ingreso o un gasto?",
+        "Ubicar el elemento y la cuenta correspondiente en el PCGE.",
+        "Revisar si el cliente ya tiene subcuentas definidas en su plan de cuentas.",
+        "Si no existe una subcuenta adecuada, solicitar su creación al responsable en lugar de usar una cuenta genérica.",
+        "Registrar la operación con una glosa clara."
+      ],
+      "ejemplos": [
+        { "titulo": "Clasificación de operaciones", "descripcion": "Pago del alquiler del local: gasto (elemento 6). Venta de mercaderías: ingreso (elemento 7). Compra de una máquina para la producción: activo inmovilizado (elemento 3). Préstamo recibido: pasivo (elemento 4)." }
+      ],
+      "errores": [
+        "Registrar como gasto una compra que debe activarse, o al revés.",
+        "Crear subcuentas duplicadas con nombres distintos.",
+        "Usar cuentas «comodín» cuando no se entiende la operación.",
+        "Modificar la codificación base de una cuenta del plan."
+      ],
+      "recomendaciones": [
+        "Mantenga actualizada una lista de las subcuentas que usa cada cliente.",
+        "Consulte el PCGE vigente en lugar de apoyarse en la memoria.",
+        "Documente por qué se eligió una cuenta cuando la operación es poco habitual."
+      ],
+      "ejercicios": [
+        { "enunciado": "Indique a qué elemento del PCGE pertenece cada partida: capital social, ventas, maquinaria, remuneraciones por pagar, gasto de alquiler.", "solucion": "Capital social: elemento 5. Ventas: elemento 7. Maquinaria: elemento 3. Remuneraciones por pagar: elemento 4. Gasto de alquiler: elemento 6." }
+      ],
+      "evaluacion": [
+        { "pregunta": "El gasto de alquiler del mes pertenece al elemento:", "opciones": ["3", "4", "7", "6"], "correcta": 3, "explicacion": "Los gastos por naturaleza se registran en el elemento 6." },
+        { "pregunta": "¿Qué elemento agrupa a los ingresos?", "opciones": ["7", "1", "5", "9"], "correcta": 0, "explicacion": "Los ingresos se agrupan en el elemento 7." },
+        { "pregunta": "Si no existe una subcuenta adecuada para una operación, lo correcto es:", "opciones": ["Usar cualquier cuenta de otro elemento", "Omitir el registro", "Solicitar la creación de la subcuenta al responsable", "Usar siempre una cuenta comodín"], "correcta": 2, "explicacion": "Evita deformar la información; la subcuenta se crea con criterio del responsable." }
+      ],
+      "normas": ["pcge"]
+    },
+    {
+      "id": "c06",
+      "numero": 6,
+      "titulo": "Conciliaciones bancarias",
+      "estado": "desarrollado",
+      "fecha_elaboracion": "2026-11-18",
+      "ultima_revision": null,
+      "resumen": "Cómo comparar el libro bancos con el estado de cuenta, explicar las diferencias y documentar la conciliación.",
+      "objetivo": "Comparar el saldo del libro bancos con el estado de cuenta del banco, identificar y explicar las diferencias y dejar documentada la conciliación.",
+      "explicacion": [
+        { "titulo": "Para qué sirve", "texto": "Confirma que los registros contables de la cuenta bancaria coinciden con la información del banco y permite detectar errores, omisiones o movimientos no registrados." },
+        { "titulo": "Origen de las diferencias", "texto": "Hay partidas en tránsito (cheques girados aún no cobrados, depósitos registrados aún no abonados por el banco), movimientos del banco todavía no registrados en libros (comisiones, intereses, tributos, cargos y abonos directos) y errores de registro." },
+        { "titulo": "Regla de cierre", "texto": "Al terminar, el saldo ajustado según el banco debe ser igual al saldo ajustado según libros." }
+      ],
+      "procedimiento": [
+        "Obtener el estado de cuenta del banco y el auxiliar de la cuenta bancaria del mismo periodo.",
+        "Verificar que el saldo inicial coincida con el saldo conciliado del periodo anterior.",
+        "Marcar cada movimiento que aparece en ambos documentos.",
+        "Listar los movimientos sin marcar: los del banco (por registrar en libros) y los de libros (partidas en tránsito).",
+        "Preparar los asientos de ajuste en libros por los movimientos del banco no registrados.",
+        "Armar el cuadro de conciliación y comprobar que ambos saldos ajustados coincidan.",
+        "Fechar la conciliación y archivarla con el estado de cuenta."
+      ],
+      "ejemplos": [
+        { "titulo": "Conciliación con cifras ficticias", "descripcion": "Saldo según estado de cuenta: 12 000. Cheques girados no cobrados: 1 500. Depósito en tránsito: 800. Saldo ajustado según banco = 12 000 − 1 500 + 800 = 11 300. Saldo según libros: 11 450. Comisión bancaria no registrada: 150. Saldo ajustado según libros = 11 450 − 150 = 11 300. Ambos saldos coinciden." }
+      ],
+      "errores": [
+        "Conciliar solo el saldo final sin revisar los movimientos.",
+        "Dejar partidas en tránsito antiguas sin seguimiento.",
+        "No registrar las comisiones y cargos del banco.",
+        "Ajustar libros para forzar el cuadre sin identificar la causa de la diferencia."
+      ],
+      "recomendaciones": [
+        "Concilie todos los meses, no solo al cierre del año.",
+        "Haga seguimiento a las partidas en tránsito de más de un periodo.",
+        "Conserve la conciliación firmada o fechada junto con su sustento."
+      ],
+      "ejercicios": [
+        { "enunciado": "Saldo según estado de cuenta: 20 000. Cheques girados no cobrados: 3 000. Depósito en tránsito: 1 200. ¿Cuál es el saldo ajustado según el banco?", "solucion": "20 000 − 3 000 + 1 200 = 18 200." }
+      ],
+      "evaluacion": [
+        { "pregunta": "Un cheque girado y aún no cobrado se considera:", "opciones": ["Un error del banco", "Una partida en tránsito", "Un ingreso no registrado", "Un gasto financiero"], "correcta": 1, "explicacion": "Está registrado en libros pero el banco aún no lo debita." },
+        { "pregunta": "Una comisión que figura en el estado de cuenta y no en libros requiere:", "opciones": ["Ignorarla", "Ajustar el saldo del banco", "Un asiento de ajuste en libros", "Esperar al cierre anual"], "correcta": 2, "explicacion": "El banco ya la cobró; la contabilidad debe reconocerla." },
+        { "pregunta": "Al terminar la conciliación, debe cumplirse que:", "opciones": ["El saldo del banco sea mayor al de libros", "Ambos saldos ajustados sean iguales", "Se eliminen todos los movimientos", "Solo coincida el saldo inicial"], "correcta": 1, "explicacion": "Ese es el criterio de cierre de la conciliación." }
+      ],
+      "normas": []
+    },
+    {
+      "id": "c07", "numero": 7, "titulo": "Análisis de cuentas", "estado": "pendiente",
+      "resumen": "Revisión y análisis de saldos y movimientos de las cuentas contables.",
+      "nota": "Pendiente de desarrollo.",
+      "normas": []
+    },
+    {
+      "id": "c08", "numero": 8, "titulo": "Cierre contable mensual", "estado": "pendiente",
+      "resumen": "Pasos y controles para el cierre contable de cada mes.",
+      "nota": "Pendiente de desarrollo. Se recomienda elaborar con el checklist propio del estudio (ver Biblioteca Profesional).",
+      "normas": []
+    },
+    {
+      "id": "c09", "numero": 9, "titulo": "Libros y registros contables", "estado": "pendiente",
+      "resumen": "Libros y registros contables y vinculados a asuntos tributarios.",
+      "nota": "Pendiente de desarrollo. Requiere identificar los libros y plazos vigentes según el régimen de cada cliente.",
+      "normas": ["libros-sunat"]
+    },
+    {
+      "id": "c10", "numero": 10, "titulo": "Estados financieros", "estado": "pendiente",
+      "resumen": "Elaboración y lectura de los estados financieros.",
+      "nota": "Pendiente de desarrollo. Requiere confirmar el marco contable aplicable.",
+      "normas": ["pcge"]
+    }
+  ]
+}

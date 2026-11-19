@@ -1,0 +1,172 @@
+{
+  "descripcion": "Herramientas interactivas para las actividades del estudio. En la Etapa 1 solo se define su diseño; se programarán en la Etapa 3.",
+  "aviso": "Ninguna herramienta usa tasas, porcentajes ni parámetros legales sin verificar su vigencia en la fuente oficial. Los resultados serán referenciales y no constituyen obligaciones legales definitivas.",
+  "herramientas": [
+    {
+      "id": "calc-igv",
+      "titulo": "Calculadora de IGV",
+      "icono": "contable",
+      "descripcion": "Obtener base imponible, impuesto y total a partir de un importe, y viceversa.",
+      "criterios": [
+        "Distinguir si el importe ingresado incluye o no el impuesto.",
+        "Calcular base imponible, impuesto y precio total con la tasa ingresada por el usuario.",
+        "Mostrar el procedimiento paso a paso para fines didácticos."
+      ],
+      "parametros": [
+        { "nombre": "Tasa del impuesto", "descripcion": "Porcentaje aplicable. Debe tomarse del TUO vigente." },
+        { "nombre": "Importe", "descripcion": "Monto ingresado (con o sin impuesto)." },
+        { "nombre": "Redondeo", "descripcion": "Criterio de decimales, según la práctica del cliente." }
+      ],
+      "advertencias": [
+        "La tasa no viene precargada hasta que se verifique su vigencia.",
+        "No reemplaza la revisión del comprobante ni la determinación del impuesto del periodo."
+      ],
+      "normas": [{ "id": "tuo-igv", "articulos": "" }, { "id": "reg-igv", "articulos": "" }]
+    },
+    {
+      "id": "calc-detracciones",
+      "titulo": "Calculadora de detracciones",
+      "icono": "tributaria",
+      "descripcion": "Estimar el importe a depositar según el bien o servicio sujeto al sistema.",
+      "criterios": [
+        "Identificar si el bien o servicio está sujeto según el anexo vigente.",
+        "Verificar si el importe supera el monto mínimo aplicable.",
+        "Calcular el depósito con el porcentaje correspondiente."
+      ],
+      "parametros": [
+        { "nombre": "Bien o servicio", "descripcion": "Selección según los anexos vigentes." },
+        { "nombre": "Porcentaje", "descripcion": "Tomado del anexo vigente; editable." },
+        { "nombre": "Monto mínimo", "descripcion": "Tope aplicable a la operación; editable." },
+        { "nombre": "Importe de la operación", "descripcion": "Monto de la factura u operación." }
+      ],
+      "advertencias": [
+        "Los anexos, porcentajes y montos cambian: deben cargarse desde una fuente verificada.",
+        "No determina quién está obligado a efectuar el depósito en casos especiales."
+      ],
+      "normas": [{ "id": "detracciones", "articulos": "" }]
+    },
+    {
+      "id": "calc-cts",
+      "titulo": "Calculadora de CTS",
+      "icono": "laboral",
+      "descripcion": "Estimar la compensación por tiempo de servicios de un periodo.",
+      "criterios": [
+        "Determinar la remuneración computable con sus componentes.",
+        "Considerar meses y días computables del periodo.",
+        "Mostrar el detalle del cálculo para su revisión."
+      ],
+      "parametros": [
+        { "nombre": "Remuneración computable", "descripcion": "Componentes remunerativos computables." },
+        { "nombre": "Periodo", "descripcion": "Fechas de inicio y fin del semestre." },
+        { "nombre": "Régimen laboral", "descripcion": "Condiciona las reglas aplicables." }
+      ],
+      "advertencias": [
+        "Resultado referencial: no es la liquidación legal definitiva.",
+        "Los regímenes especiales tienen reglas distintas."
+      ],
+      "normas": [{ "id": "tuo-cts", "articulos": "" }]
+    },
+    {
+      "id": "calc-gratificaciones",
+      "titulo": "Calculadora de gratificaciones",
+      "icono": "laboral",
+      "descripcion": "Estimar gratificaciones legales según meses computables y remuneración.",
+      "criterios": [
+        "Determinar los meses completos computables en el semestre.",
+        "Calcular la gratificación proporcional.",
+        "Considerar los conceptos adicionales previstos por la norma."
+      ],
+      "parametros": [
+        { "nombre": "Remuneración computable", "descripcion": "Base de cálculo." },
+        { "nombre": "Meses computables", "descripcion": "Meses completos laborados en el periodo." },
+        { "nombre": "Porcentaje de concepto adicional", "descripcion": "Debe tomarse de la norma vigente; editable." }
+      ],
+      "advertencias": [
+        "Resultado referencial, sujeto a la verificación de la norma vigente y del régimen del trabajador."
+      ],
+      "normas": [{ "id": "ley-27735", "articulos": "" }]
+    },
+    {
+      "id": "calc-vacaciones",
+      "titulo": "Calculadora de vacaciones",
+      "icono": "laboral",
+      "descripcion": "Estimar la remuneración vacacional y llevar el control de días.",
+      "criterios": [
+        "Registrar fecha de ingreso y días gozados.",
+        "Determinar la remuneración vacacional según la remuneración computable.",
+        "Mostrar saldo de días."
+      ],
+      "parametros": [
+        { "nombre": "Fecha de ingreso", "descripcion": "Inicio del vínculo." },
+        { "nombre": "Remuneración computable", "descripcion": "Base de cálculo." },
+        { "nombre": "Días de descanso", "descripcion": "Según régimen; editable." }
+      ],
+      "advertencias": [
+        "No cubre casos de vacaciones no gozadas ni regímenes especiales sin revisión humana."
+      ],
+      "normas": [{ "id": "d-leg-713", "articulos": "" }]
+    },
+    {
+      "id": "calc-liquidacion",
+      "titulo": "Calculadora de liquidación de beneficios sociales",
+      "icono": "laboral",
+      "descripcion": "Integrar CTS, gratificaciones y vacaciones truncas en una liquidación referencial.",
+      "criterios": [
+        "Calcular cada beneficio por separado con su propia base.",
+        "Presentar un resumen con el detalle de cada concepto.",
+        "Permitir ajustar conceptos antes de emitir el cuadro final."
+      ],
+      "parametros": [
+        { "nombre": "Fecha de ingreso y cese", "descripcion": "Periodo laborado." },
+        { "nombre": "Remuneración computable", "descripcion": "Base de cálculo." },
+        { "nombre": "Motivo del cese", "descripcion": "Condiciona los conceptos aplicables." }
+      ],
+      "advertencias": [
+        "Es un cálculo referencial. La liquidación definitiva debe ser revisada por el responsable laboral."
+      ],
+      "normas": [{ "id": "tuo-cts", "articulos": "" }, { "id": "ley-27735", "articulos": "" }, { "id": "d-leg-713", "articulos": "" }, { "id": "tuo-lpcl", "articulos": "" }]
+    },
+    {
+      "id": "sim-renta",
+      "titulo": "Simulador de impuesto a la renta",
+      "icono": "tributaria",
+      "descripcion": "Simular el impuesto anual y los pagos a cuenta según el régimen.",
+      "criterios": [
+        "Seleccionar el régimen tributario del contribuyente de ejemplo.",
+        "Aplicar tasas, coeficientes y tramos ingresados por el usuario.",
+        "Mostrar la comparación entre regímenes cuando corresponda."
+      ],
+      "parametros": [
+        { "nombre": "Régimen", "descripcion": "General, MYPE Tributario, Especial o Nuevo RUS." },
+        { "nombre": "Ingresos y gastos", "descripcion": "Montos ficticios o de ejemplo; nunca de clientes reales." },
+        { "nombre": "Tasas y tramos", "descripcion": "Deben verificarse en la normativa vigente; editables." }
+      ],
+      "advertencias": [
+        "Es una simulación didáctica. No determina la obligación tributaria real de ningún contribuyente.",
+        "No use datos reales de clientes."
+      ],
+      "normas": [{ "id": "tuo-lir", "articulos": "" }, { "id": "mype-trib", "articulos": "" }, { "id": "nrus", "articulos": "" }]
+    },
+    {
+      "id": "calendario-obligaciones",
+      "titulo": "Calendario de obligaciones tributarias",
+      "icono": "calendar",
+      "descripcion": "Consultar fechas de vencimiento según el cronograma oficial de la SUNAT.",
+      "criterios": [
+        "Cargar el cronograma publicado por la SUNAT en un archivo de datos verificado.",
+        "Filtrar por periodo tributario y por último dígito del RUC (solo el dígito, nunca el RUC completo).",
+        "Indicar la fecha de verificación del cronograma."
+      ],
+      "parametros": [
+        { "nombre": "Último dígito del RUC", "descripcion": "Un solo dígito; no se solicita el número completo." },
+        { "nombre": "Periodo tributario", "descripcion": "Mes y año." },
+        { "nombre": "Cronograma", "descripcion": "Archivo de datos cargado tras revisión humana." }
+      ],
+      "advertencias": [
+        "Sin conexión real con la SUNAT, el calendario no se actualiza solo: requiere revisión humana de cada cronograma.",
+        "Confirmar siempre las fechas en el sitio oficial."
+      ],
+      "normas": [{ "id": "tuo-ct", "articulos": "" }]
+    }
+  ]
+}

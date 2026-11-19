@@ -1,0 +1,165 @@
+{
+  "area": "laboral",
+  "intro": "Biblioteca de capacitación laboral enfocada en la legislación peruana. Tres temas tienen contenido inicial conceptual; los cálculos de beneficios sociales se desarrollarán con parámetros verificados (FO Tools, Etapa 3).",
+  "normas_marco": ["tuo-lpcl", "t-registro", "ley-28806", "ley-29783"],
+  "items": [
+    {
+      "id": "l01",
+      "numero": 1,
+      "titulo": "Contratos de trabajo",
+      "estado": "desarrollado",
+      "fecha_elaboracion": "2026-11-18",
+      "ultima_revision": null,
+      "resumen": "Elementos del contrato de trabajo, contratos a plazo indeterminado y sujetos a modalidad, y riesgos de desnaturalización.",
+      "objetivo": "Distinguir el contrato a plazo indeterminado del contrato sujeto a modalidad, reconocer los elementos esenciales de la relación laboral y revisar un contrato antes de su firma.",
+      "nota": "Las formalidades, plazos de registro y causales de cada modalidad deben verificarse en la norma vigente y en la fuente oficial antes de aplicarlas.",
+      "explicacion": [
+        { "titulo": "Elementos de la relación laboral", "texto": "La relación laboral se caracteriza por la prestación personal de servicios, la remuneración y la subordinación. Cuando se presentan estos elementos se presume un contrato a plazo indeterminado (revise el artículo 4 del TUO, por verificar)." },
+        { "titulo": "Plazo indeterminado y sujeto a modalidad", "texto": "El contrato puede celebrarse por tiempo indeterminado o sujeto a modalidad (plazo determinado). Los contratos sujetos a modalidad requieren una causa objetiva que los justifique." },
+        { "titulo": "Formalidades", "texto": "Los contratos sujetos a modalidad deben constar por escrito y tienen obligaciones de registro ante la autoridad administrativa de trabajo. Los plazos y condiciones deben confirmarse en la norma vigente." },
+        { "titulo": "Contenido recomendable", "texto": "Identificación de las partes, cargo y funciones, remuneración, jornada, lugar de trabajo, plazo y causa objetiva (si es sujeto a modalidad) y régimen laboral aplicable." },
+        { "titulo": "Desnaturalización", "texto": "Cuando un contrato sujeto a modalidad no cumple los requisitos legales, puede considerarse a plazo indeterminado. Los supuestos concretos deben verificarse en la norma." }
+      ],
+      "procedimiento": [
+        "Confirmar con el responsable el régimen laboral y la modalidad de contratación.",
+        "Reunir los datos del trabajador y las condiciones del cargo.",
+        "Redactar a partir del modelo aprobado por el estudio o por el cliente.",
+        "Revisar la causa objetiva, el plazo y la coherencia con la planilla.",
+        "Firmar y entregar copia al trabajador.",
+        "Registrar al trabajador en el T-Registro y cumplir los registros que correspondan."
+      ],
+      "ejemplos": [
+        { "titulo": "Revisión de un contrato a plazo fijo", "descripcion": "Un contrato a plazo fijo describe solo el cargo, pero no explica la causa temporal que justifica el plazo. Acción: devolverlo al responsable para completar la causa objetiva antes de la firma, porque su ausencia aumenta el riesgo de desnaturalización." }
+      ],
+      "errores": [
+        "Contratos sujetos a modalidad sin causa objetiva descrita.",
+        "Renovaciones sucesivas sin sustento.",
+        "No entregar copia del contrato al trabajador.",
+        "Condiciones del contrato (cargo, remuneración, régimen) distintas a las de la planilla."
+      ],
+      "recomendaciones": [
+        "Utilice siempre el modelo aprobado y registre cada variación respecto de él.",
+        "Controle los vencimientos de contratos con un calendario interno.",
+        "Consulte al responsable laboral ante cualquier renovación."
+      ],
+      "ejercicios": [
+        { "enunciado": "Mencione los tres elementos esenciales de la relación laboral.", "solucion": "Prestación personal de servicios, remuneración y subordinación." }
+      ],
+      "evaluacion": [
+        { "pregunta": "Los elementos esenciales de la relación laboral son:", "opciones": ["Capital, utilidad y local", "Solo la remuneración", "Prestación personal, remuneración y subordinación", "Solo el horario"], "correcta": 2, "explicacion": "Son los tres elementos que caracterizan un vínculo laboral." },
+        { "pregunta": "Un contrato sujeto a modalidad debe contar con:", "opciones": ["Solo acuerdo verbal", "Ninguna formalidad", "La firma del contador", "Causa objetiva y constar por escrito"], "correcta": 3, "explicacion": "La modalidad requiere una causa objetiva y formalidad escrita." },
+        { "pregunta": "Las renovaciones sucesivas sin sustento pueden generar:", "opciones": ["Riesgo de desnaturalización", "Exoneración de beneficios", "Menos obligaciones", "Nada"], "correcta": 0, "explicacion": "Un contrato desnaturalizado puede considerarse a plazo indeterminado." }
+      ],
+      "normas": [{ "id": "tuo-lpcl", "articulos": "Art. 4 (presunción de contrato a plazo indeterminado) — por verificar" }]
+    },
+    { "id": "l02", "numero": 2, "titulo": "Regímenes laborales", "estado": "pendiente", "resumen": "Régimen laboral general y regímenes especiales aplicables.", "nota": "Pendiente de desarrollo. Identificar las normas de cada régimen antes de desarrollar el tema.", "normas": ["tuo-lpcl"] },
+    {
+      "id": "l03",
+      "numero": 3,
+      "titulo": "Alta y baja en T-Registro",
+      "estado": "desarrollado",
+      "fecha_elaboracion": "2026-11-18",
+      "ultima_revision": null,
+      "resumen": "Qué es el T-Registro y el flujo básico de alta, modificación y baja de trabajadores.",
+      "objetivo": "Entender qué es el T-Registro, qué información contiene y el flujo básico de alta, modificación y baja de trabajadores.",
+      "nota": "Los plazos para registrar altas y bajas se fijan en la norma vigente y no se incluyen aquí: consúltelos en la SUNAT.",
+      "explicacion": [
+        { "titulo": "Qué es", "texto": "Es el registro de información laboral, de seguridad social y de otros datos de empleadores, trabajadores y otros prestadores de servicios, administrado por la SUNAT (ver el decreto supremo de la planilla electrónica, por verificar)." },
+        { "titulo": "Por qué es importante", "texto": "Es la base de la planilla electrónica: los errores del T-Registro se arrastran a la planilla, a los aportes y a los beneficios." },
+        { "titulo": "Movimientos", "texto": "Alta (inicio del vínculo), modificación de datos del trabajador o de su vínculo, y baja (término del vínculo, con su fecha y motivo)." },
+        { "titulo": "Plazos", "texto": "Los plazos de alta y baja los fija la normativa vigente y se consultan en la SUNAT antes de efectuar el trámite." },
+        { "titulo": "Acceso y credenciales", "texto": "El trámite se realiza con las credenciales del propio empleador. Esta plataforma nunca solicita ni almacena claves; no las comparta por mensajes ni correos." }
+      ],
+      "procedimiento": [
+        "Reunir los datos del trabajador: identificación, fecha de ingreso, categoría ocupacional, régimen de salud y régimen pensionario, entre otros.",
+        "Verificar los datos con los documentos del trabajador y con el contrato.",
+        "Registrar el alta por el medio oficial dentro del plazo vigente.",
+        "Conservar la constancia del trámite.",
+        "Para una baja: confirmar la fecha y el motivo del cese, y registrar la baja dentro del plazo vigente.",
+        "Conciliar el T-Registro con la planilla del mes."
+      ],
+      "ejemplos": [
+        { "titulo": "Verificación antes del alta (trabajador ficticio)", "descripcion": "El contrato indica fecha de ingreso del día 3 del mes, pero el formulario preliminar muestra el día 5. Acción: corregir el dato antes del alta, porque la fecha de ingreso afecta el cálculo de la remuneración y de los beneficios." }
+      ],
+      "errores": [
+        "Registrar el alta fuera del plazo vigente.",
+        "No verificar el régimen de salud o pensionario del trabajador.",
+        "Dar de baja con una fecha o motivo incorrectos.",
+        "Compartir claves de acceso por chat o correo."
+      ],
+      "recomendaciones": [
+        "Use una lista de verificación de datos del trabajador antes de cada alta.",
+        "Revise mensualmente que no existan trabajadores en planilla sin alta, ni altas sin movimiento."
+      ],
+      "ejercicios": [
+        { "enunciado": "Un trabajador cesó el último día del mes y aún no se registró su baja. ¿Qué debe hacerse?", "solucion": "Confirmar la fecha y el motivo del cese, consultar el plazo vigente en la SUNAT y registrar la baja de inmediato por el medio oficial, conservando la constancia." }
+      ],
+      "evaluacion": [
+        { "pregunta": "El T-Registro es administrado por:", "opciones": ["RENIEC", "SUNAT", "INDECOPI", "SUNARP"], "correcta": 1, "explicacion": "El Registro de Información Laboral es administrado por la SUNAT." },
+        { "pregunta": "¿Se deben compartir claves de acceso por chat para hacer un alta?", "opciones": ["Sí, siempre", "Solo con practicantes", "No, nunca", "Solo por correo"], "correcta": 2, "explicacion": "Las credenciales son personales y confidenciales." },
+        { "pregunta": "Los plazos de alta y baja se verifican en:", "opciones": ["Un grupo de mensajería", "La memoria", "Lo que se hizo el año pasado", "La normativa vigente y las fuentes oficiales"], "correcta": 3, "explicacion": "Los plazos pueden cambiar y deben confirmarse en la fuente oficial." }
+      ],
+      "normas": ["t-registro"]
+    },
+    { "id": "l04", "numero": 4, "titulo": "Elaboración de planillas", "estado": "pendiente", "resumen": "Elaboración de la planilla de remuneraciones.", "nota": "Pendiente de desarrollo.", "normas": ["t-registro"] },
+    { "id": "l05", "numero": 5, "titulo": "PLAME", "estado": "pendiente", "resumen": "Planilla Mensual de Pagos: estructura, declaración y pago.", "nota": "Pendiente de desarrollo.", "normas": ["t-registro"] },
+    { "id": "l06", "numero": 6, "titulo": "Remuneraciones", "estado": "pendiente", "resumen": "Concepto de remuneración, conceptos remunerativos y no remunerativos.", "nota": "Pendiente de desarrollo.", "normas": ["tuo-lpcl"] },
+    { "id": "l07", "numero": 7, "titulo": "Asignación familiar", "estado": "pendiente", "resumen": "Derecho y cálculo de la asignación familiar.", "nota": "Pendiente de desarrollo. Los montos deben verificarse en la norma vigente.", "normas": ["ley-25129"] },
+    { "id": "l08", "numero": 8, "titulo": "Horas extras", "estado": "pendiente", "resumen": "Trabajo en sobretiempo y su pago.", "nota": "Pendiente de desarrollo. Las sobretasas deben verificarse en la norma vigente.", "normas": ["tuo-jornada"] },
+    {
+      "id": "l09",
+      "numero": 9,
+      "titulo": "Vacaciones",
+      "estado": "desarrollado",
+      "fecha_elaboracion": "2026-11-18",
+      "ultima_revision": null,
+      "resumen": "Derecho al descanso vacacional, control de días y datos necesarios para su gestión.",
+      "objetivo": "Conocer el derecho al descanso vacacional, su estructura general y los datos que se necesitan para controlarlo. Los cálculos económicos se desarrollarán en FO Tools (Etapa 3).",
+      "nota": "Este tema describe el régimen laboral general. Otros regímenes pueden tener reglas distintas: verifique siempre el régimen del trabajador.",
+      "explicacion": [
+        { "titulo": "Derecho", "texto": "El trabajador tiene derecho a un descanso vacacional remunerado una vez cumplido el récord vacacional exigido por la norma (Decreto Legislativo N.° 713 y su reglamento, por verificar)." },
+        { "titulo": "Duración general", "texto": "En el régimen laboral general, el descanso es de 30 días calendario por cada año completo de servicios. Otros regímenes pueden establecer una duración distinta (por verificar)." },
+        { "titulo": "Oportunidad", "texto": "La oportunidad del descanso se fija de común acuerdo entre empleador y trabajador, considerando las necesidades de la empresa; a falta de acuerdo, decide el empleador (por verificar)." },
+        { "titulo": "Vacaciones no gozadas", "texto": "La falta de goce dentro de los plazos legales puede generar consecuencias económicas previstas por la norma. Los supuestos y montos deben verificarse caso por caso." }
+      ],
+      "procedimiento": [
+        "Llevar un cuadro de control con fecha de ingreso, periodos, días gozados y saldo de cada trabajador.",
+        "Programar las vacaciones con el trabajador y dejar constancia del acuerdo.",
+        "Verificar la remuneración computable según el régimen laboral.",
+        "Reflejar el descanso en la planilla del mes que corresponda.",
+        "Archivar la solicitud, la aprobación y la boleta o constancia de pago."
+      ],
+      "ejemplos": [
+        { "titulo": "Control de vacaciones (trabajador ficticio)", "descripcion": "Un trabajador ingresó el 1 de marzo de 2024. Al cumplir el primer año de servicios, el 1 de marzo de 2025, se completa el primer periodo; si además cumple el récord vacacional, se genera el derecho a su descanso. El cuadro de control debe registrar este hecho y los días que se vayan gozando." }
+      ],
+      "errores": [
+        "No llevar un control de días gozados y pendientes.",
+        "Aplicar a todos los trabajadores el régimen general sin verificar su régimen.",
+        "No dejar constancia escrita de la programación.",
+        "No reflejar el descanso en la planilla del mes."
+      ],
+      "recomendaciones": [
+        "Revise trimestralmente los saldos de vacaciones pendientes.",
+        "Alerte al responsable cuando un trabajador acumule periodos sin goce."
+      ],
+      "ejercicios": [
+        { "enunciado": "¿Qué datos mínimos debe tener un cuadro de control de vacaciones?", "solucion": "Fecha de ingreso, periodo vacacional, días gozados con sus fechas, saldo pendiente y régimen laboral del trabajador." }
+      ],
+      "evaluacion": [
+        { "pregunta": "La oportunidad del descanso vacacional se fija, en primer lugar:", "opciones": ["Por sorteo", "Solo por el trabajador", "Solo por el practicante", "De común acuerdo entre empleador y trabajador"], "correcta": 3, "explicacion": "A falta de acuerdo, decide el empleador (por verificar en la norma)." },
+        { "pregunta": "En el régimen laboral general, la duración del descanso es de:", "opciones": ["30 días calendario por año completo de servicios", "7 días", "15 días", "45 días"], "correcta": 0, "explicacion": "Dato del régimen general, sujeto a verificación en la norma vigente." },
+        { "pregunta": "Un control de vacaciones debe incluir como mínimo:", "opciones": ["Solo el nombre", "Fecha de ingreso, días gozados y saldo", "Solo la remuneración", "Un comentario"], "correcta": 1, "explicacion": "Sin estos datos no se puede determinar el saldo." }
+      ],
+      "normas": ["d-leg-713"]
+    },
+    { "id": "l10", "numero": 10, "titulo": "Gratificaciones", "estado": "pendiente", "resumen": "Gratificaciones legales y su cálculo.", "nota": "Pendiente de desarrollo. Los porcentajes adicionales deben verificarse en la norma vigente.", "normas": ["ley-27735"] },
+    { "id": "l11", "numero": 11, "titulo": "CTS", "estado": "pendiente", "resumen": "Compensación por tiempo de servicios y su cálculo.", "nota": "Pendiente de desarrollo.", "normas": ["tuo-cts"] },
+    { "id": "l12", "numero": 12, "titulo": "Liquidación de beneficios sociales", "estado": "pendiente", "resumen": "Conceptos y cálculo de la liquidación al cese.", "nota": "Pendiente de desarrollo. Se desarrollará junto con la calculadora de FO Tools.", "normas": ["tuo-lpcl", "tuo-cts", "ley-27735", "d-leg-713"] },
+    { "id": "l13", "numero": 13, "titulo": "Suspensión perfecta e imperfecta", "estado": "pendiente", "resumen": "Suspensión del contrato de trabajo: causas y efectos.", "nota": "Pendiente de desarrollo.", "normas": ["tuo-lpcl"] },
+    { "id": "l14", "numero": 14, "titulo": "Subsidios", "estado": "pendiente", "resumen": "Subsidios por incapacidad, maternidad y otros.", "nota": "Pendiente de desarrollo.", "normas": ["ley-26790"] },
+    { "id": "l15", "numero": 15, "titulo": "Seguridad y salud en el trabajo", "estado": "pendiente", "resumen": "Obligaciones del empleador en seguridad y salud en el trabajo.", "nota": "Pendiente de desarrollo.", "normas": ["ley-29783"] },
+    { "id": "l16", "numero": 16, "titulo": "Fiscalizaciones SUNAFIL", "estado": "pendiente", "resumen": "Procedimiento inspectivo y atención de una fiscalización laboral.", "nota": "Pendiente de desarrollo.", "normas": ["ley-28806", "ley-29981"] },
+    { "id": "l17", "numero": 17, "titulo": "Infracciones y sanciones laborales", "estado": "pendiente", "resumen": "Infracciones laborales y su clasificación.", "nota": "Pendiente de desarrollo. Tablas de multas deben tomarse de la norma vigente.", "normas": ["reg-inspeccion"] },
+    { "id": "l18", "numero": 18, "titulo": "Obligaciones del empleador", "estado": "pendiente", "resumen": "Obligaciones laborales, de seguridad social y de registro del empleador.", "nota": "Pendiente de desarrollo.", "normas": ["tuo-lpcl", "ley-29783"] }
+  ]
+}

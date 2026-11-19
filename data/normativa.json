@@ -1,0 +1,58 @@
+{
+  "descripcion": "Catálogo central de normas citadas en la plataforma, con su fuente oficial, estado y fechas. Cada módulo referencia estas normas por su identificador.",
+  "fuentes": [
+    { "id": "sunat", "nombre": "SUNAT", "url": "https://www.sunat.gob.pe/", "descripcion": "Superintendencia Nacional de Aduanas y de Administración Tributaria. Normas, cronogramas y trámites tributarios." },
+    { "id": "sunafil", "nombre": "SUNAFIL", "url": "https://www.gob.pe/sunafil", "descripcion": "Superintendencia Nacional de Fiscalización Laboral. Inspección y fiscalización laboral." },
+    { "id": "mtpe", "nombre": "Ministerio de Trabajo", "url": "https://www.gob.pe/mtpe", "descripcion": "Ministerio de Trabajo y Promoción del Empleo. Normativa laboral y de seguridad y salud." },
+    { "id": "elperuano", "nombre": "El Peruano", "url": "https://elperuano.pe/", "descripcion": "Diario oficial. Publicación y fecha oficial de normas legales." },
+    { "id": "mef", "nombre": "MEF", "url": "https://www.gob.pe/mef", "descripcion": "Ministerio de Economía y Finanzas. Normas económicas, tributarias y contables." },
+    { "id": "essalud", "nombre": "EsSalud", "url": "https://www.gob.pe/essalud", "descripcion": "Seguro Social de Salud. Prestaciones, subsidios y aportes." }
+  ],
+  "reglas": [
+    "No inventar leyes, decretos, resoluciones, artículos ni porcentajes.",
+    "No presentar información desactualizada como vigente.",
+    "Diferenciar entre norma vigente, modificada y derogada.",
+    "Indicar número de norma y artículo aplicable cuando corresponda.",
+    "Registrar fecha de publicación y fecha de vigencia de cada norma.",
+    "Identificar la fuente oficial de cada contenido normativo.",
+    "Mostrar la fecha de última revisión de cada módulo.",
+    "Advertir cuando una norma no haya podido verificarse.",
+    "No presentar cálculos referenciales como obligaciones legales definitivas."
+  ],
+  "proceso_revision": [
+    "Abrir la fuente oficial de la norma (SUNAT, SUNAFIL, MTPE, El Peruano, MEF o EsSalud).",
+    "Confirmar el número exacto de la norma, su fecha de publicación y su fecha de vigencia.",
+    "Verificar si fue modificada o derogada y cuál es el texto vigente de los artículos aplicables.",
+    "Actualizar la norma en data/normativa.json: estado, publicacion, vigencia y ultima_revision (formato AAAA-MM-DD).",
+    "Completar los artículos aplicables en el módulo que la cita y registrar su fecha en ultima_revision.",
+    "Anotar el cambio en la sección «novedades» de data/normativa.json."
+  ],
+  "novedades": [],
+  "normas": [
+    { "id": "pcge", "ambito": "contable", "nombre": "Plan Contable General Empresarial (PCGE)", "descripcion": "Plan de cuentas oficial. Resolución y versión vigentes por identificar.", "fuente": "MEF", "url": "https://www.gob.pe/mef", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "libros-sunat", "ambito": "contable", "nombre": "Res. de Superintendencia N.° 234-2006/SUNAT", "descripcion": "Normas sobre libros y registros vinculados a asuntos tributarios.", "fuente": "SUNAT", "url": "https://www.sunat.gob.pe/", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "tuo-igv", "ambito": "tributaria", "nombre": "TUO de la Ley del IGV e ISC — D.S. N.° 055-99-EF", "descripcion": "Texto Único Ordenado de la Ley del Impuesto General a las Ventas e Impuesto Selectivo al Consumo.", "fuente": "SUNAT", "url": "https://www.sunat.gob.pe/", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "reg-igv", "ambito": "tributaria", "nombre": "Reglamento de la Ley del IGV e ISC — D.S. N.° 029-94-EF", "descripcion": "Reglamento de la Ley del IGV e ISC.", "fuente": "SUNAT", "url": "https://www.sunat.gob.pe/", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "tuo-lir", "ambito": "tributaria", "nombre": "TUO de la Ley del Impuesto a la Renta — D.S. N.° 179-2004-EF", "descripcion": "Texto Único Ordenado de la Ley del Impuesto a la Renta (incluye reglas de regímenes del impuesto).", "fuente": "SUNAT", "url": "https://www.sunat.gob.pe/", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "reg-lir", "ambito": "tributaria", "nombre": "Reglamento de la Ley del Impuesto a la Renta — D.S. N.° 122-94-EF", "descripcion": "Reglamento de la Ley del Impuesto a la Renta.", "fuente": "SUNAT", "url": "https://www.sunat.gob.pe/", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "tuo-ct", "ambito": "tributaria", "nombre": "TUO del Código Tributario — D.S. N.° 133-2013-EF", "descripcion": "Texto Único Ordenado del Código Tributario (obligaciones, fiscalización, infracciones y sanciones).", "fuente": "SUNAT", "url": "https://www.sunat.gob.pe/", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "rcp", "ambito": "tributaria", "nombre": "Res. de Superintendencia N.° 007-99/SUNAT", "descripcion": "Reglamento de Comprobantes de Pago.", "fuente": "SUNAT", "url": "https://www.sunat.gob.pe/", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "detracciones", "ambito": "tributaria", "nombre": "D. Leg. N.° 940 (TUO: D.S. N.° 155-2004-EF) y Res. de Superintendencia N.° 183-2004/SUNAT", "descripcion": "Sistema de Pago de Obligaciones Tributarias con el Gobierno Central (detracciones) y su norma de aplicación.", "fuente": "SUNAT", "url": "https://www.sunat.gob.pe/", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "nrus", "ambito": "tributaria", "nombre": "D. Leg. N.° 937", "descripcion": "Texto del Nuevo Régimen Único Simplificado.", "fuente": "SUNAT", "url": "https://www.sunat.gob.pe/", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "mype-trib", "ambito": "tributaria", "nombre": "D. Leg. N.° 1269", "descripcion": "Régimen MYPE Tributario del Impuesto a la Renta.", "fuente": "SUNAT", "url": "https://www.sunat.gob.pe/", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "sire", "ambito": "tributaria", "nombre": "Res. de Superintendencia N.° 112-2021/SUNAT", "descripcion": "Sistema Integrado de Registros Electrónicos (SIRE).", "fuente": "SUNAT", "url": "https://www.sunat.gob.pe/", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "ley-28194", "ambito": "tributaria", "nombre": "Ley N.° 28194", "descripcion": "Ley para la lucha contra la evasión y para la formalización de la economía (bancarización).", "fuente": "SUNAT", "url": "https://www.sunat.gob.pe/", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "tuo-lpcl", "ambito": "laboral", "nombre": "TUO del D. Leg. N.° 728 — D.S. N.° 003-97-TR", "descripcion": "Ley de Productividad y Competitividad Laboral (contratos, suspensión, extinción del vínculo).", "fuente": "Ministerio de Trabajo", "url": "https://www.gob.pe/mtpe", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "d-leg-713", "ambito": "laboral", "nombre": "D. Leg. N.° 713", "descripcion": "Descansos remunerados de los trabajadores (incluye vacaciones) en la actividad privada.", "fuente": "Ministerio de Trabajo", "url": "https://www.gob.pe/mtpe", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "ley-27735", "ambito": "laboral", "nombre": "Ley N.° 27735", "descripcion": "Ley que regula el otorgamiento de las gratificaciones para los trabajadores del régimen de la actividad privada.", "fuente": "Ministerio de Trabajo", "url": "https://www.gob.pe/mtpe", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "tuo-cts", "ambito": "laboral", "nombre": "TUO del D. Leg. N.° 650 — D.S. N.° 001-97-TR", "descripcion": "Ley de Compensación por Tiempo de Servicios (CTS).", "fuente": "Ministerio de Trabajo", "url": "https://www.gob.pe/mtpe", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "ley-25129", "ambito": "laboral", "nombre": "Ley N.° 25129", "descripcion": "Asignación familiar para trabajadores de la actividad privada.", "fuente": "Ministerio de Trabajo", "url": "https://www.gob.pe/mtpe", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "tuo-jornada", "ambito": "laboral", "nombre": "TUO del D. Leg. N.° 854 — D.S. N.° 007-2002-TR", "descripcion": "Ley de Jornada de Trabajo, Horario y Trabajo en Sobretiempo.", "fuente": "Ministerio de Trabajo", "url": "https://www.gob.pe/mtpe", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "t-registro", "ambito": "laboral", "nombre": "D.S. N.° 018-2007-TR", "descripcion": "Planilla Electrónica: T-Registro y PLAME.", "fuente": "Ministerio de Trabajo", "url": "https://www.gob.pe/mtpe", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "ley-26790", "ambito": "laboral", "nombre": "Ley N.° 26790", "descripcion": "Ley de Modernización de la Seguridad Social en Salud (base de prestaciones y subsidios de EsSalud).", "fuente": "EsSalud", "url": "https://www.gob.pe/essalud", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "ley-29783", "ambito": "laboral", "nombre": "Ley N.° 29783", "descripcion": "Ley de Seguridad y Salud en el Trabajo.", "fuente": "Ministerio de Trabajo", "url": "https://www.gob.pe/mtpe", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "ley-28806", "ambito": "laboral", "nombre": "Ley N.° 28806", "descripcion": "Ley General de Inspección del Trabajo.", "fuente": "SUNAFIL", "url": "https://www.gob.pe/sunafil", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "reg-inspeccion", "ambito": "laboral", "nombre": "D.S. N.° 019-2006-TR", "descripcion": "Reglamento de la Ley General de Inspección del Trabajo (incluye infracciones y sanciones laborales).", "fuente": "SUNAFIL", "url": "https://www.gob.pe/sunafil", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null },
+    { "id": "ley-29981", "ambito": "laboral", "nombre": "Ley N.° 29981", "descripcion": "Ley que crea la Superintendencia Nacional de Fiscalización Laboral (SUNAFIL).", "fuente": "SUNAFIL", "url": "https://www.gob.pe/sunafil", "estado": "por_verificar", "publicacion": null, "vigencia": null, "ultima_revision": null }
+  ]
+}

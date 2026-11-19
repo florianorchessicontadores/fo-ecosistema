@@ -1,0 +1,166 @@
+{
+  "area": "tributaria",
+  "intro": "Temas de legislación y procedimientos tributarios peruanos. Tres temas tienen contenido inicial conceptual; el resto está pendiente de desarrollo. Ningún tema usa tasas, plazos ni montos sin verificar en la fuente oficial.",
+  "normas_marco": ["tuo-ct", "tuo-igv", "tuo-lir", "rcp"],
+  "items": [
+    {
+      "id": "t01",
+      "numero": 1,
+      "titulo": "IGV",
+      "estado": "desarrollado",
+      "fecha_elaboracion": "2026-11-18",
+      "ultima_revision": null,
+      "resumen": "Mecanismo general del IGV: débito fiscal, crédito fiscal y requisitos del crédito.",
+      "objetivo": "Comprender el mecanismo general del IGV (débito fiscal menos crédito fiscal) y los requisitos del crédito fiscal, sin utilizar tasas ni plazos que no hayan sido verificados.",
+      "nota": "Este tema no incluye la tasa del impuesto, plazos de declaración ni topes: debe consultarlos en la normativa vigente de la SUNAT.",
+      "explicacion": [
+        { "titulo": "Naturaleza del impuesto", "texto": "Es un impuesto indirecto que grava las operaciones comprendidas en el TUO de la Ley del IGV e ISC. Se aplica en cada etapa de la cadena y se calcula por diferencia entre el impuesto de las ventas y el de las compras." },
+        { "titulo": "Débito fiscal y crédito fiscal", "texto": "El débito fiscal es el impuesto de las operaciones gravadas del periodo. El crédito fiscal es el impuesto de las adquisiciones que cumplen los requisitos que establece la ley." },
+        { "titulo": "Impuesto a pagar o saldo a favor", "texto": "Si el débito supera al crédito, la diferencia es el impuesto a pagar. Si el crédito supera al débito, se genera un saldo a favor, cuyo tratamiento se rige por las reglas vigentes (verifique en la norma)." },
+        { "titulo": "Requisitos del crédito fiscal", "texto": "La ley distingue requisitos sustanciales y formales (ver la referencia a los artículos 18 y 19 del TUO, por verificar). En la práctica: comprobante de pago o documento válido, anotado en el registro de compras conforme a las reglas vigentes, y cumplimiento de los medios de pago aplicables." },
+        { "titulo": "Parámetros que se consultan en la fuente", "texto": "La tasa, los plazos de declaración y los topes no se fijan en esta plataforma. Se consultan en la SUNAT y se aplican solo tras verificar su vigencia." }
+      ],
+      "procedimiento": [
+        "Revisar que los registros de ventas y compras del periodo estén completos.",
+        "Validar los comprobantes de compra: datos del proveedor, validez del comprobante y sustento.",
+        "Separar las compras que dan derecho a crédito fiscal de las que no.",
+        "Determinar el débito fiscal y el crédito fiscal del periodo.",
+        "Calcular la diferencia y considerar el saldo a favor de periodos anteriores, si lo hubiera.",
+        "Elaborar la declaración y conservar la constancia y los papeles de trabajo."
+      ],
+      "ejemplos": [
+        { "titulo": "Mecanismo con una tasa simbólica «i» (cifras ficticias)", "descripcion": "Ventas gravadas del mes (base imponible): V = 10 000. Compras con derecho a crédito (base): C = 6 000. Débito = V × i. Crédito = C × i. IGV a pagar = (V − C) × i = 4 000 × i. La tasa «i» debe tomarse de la normativa vigente." }
+      ],
+      "errores": [
+        "Tomar crédito fiscal de comprobantes no anotados o con datos incorrectos.",
+        "Aplicar una tasa de memoria sin verificarla.",
+        "Olvidar notas de crédito y de débito del periodo.",
+        "Declarar fuera de plazo por no revisar el cronograma vigente."
+      ],
+      "recomendaciones": [
+        "Verifique siempre el cronograma de obligaciones en el sitio de la SUNAT.",
+        "Mantenga conciliado el registro de compras y ventas con el libro contable.",
+        "Documente la razón por la que una compra no genera crédito fiscal."
+      ],
+      "ejercicios": [
+        { "enunciado": "Con bases ficticias V = 20 000 y C = 25 000, ¿qué ocurre en el periodo?", "solucion": "El crédito supera al débito: se genera un saldo a favor equivalente a (C − V) × i, que se trata según la normativa vigente." }
+      ],
+      "evaluacion": [
+        { "pregunta": "De forma general, el IGV a pagar del periodo se determina como:", "opciones": ["Solo el impuesto de las compras", "Crédito fiscal + débito fiscal", "Débito fiscal − crédito fiscal", "Solo el impuesto de las ventas"], "correcta": 2, "explicacion": "Es el mecanismo general de débito y crédito fiscal." },
+        { "pregunta": "¿Qué debe hacer el practicante respecto de la tasa y los plazos del impuesto?", "opciones": ["Usar los del año anterior", "Consultarlos en la normativa vigente de la SUNAT", "Usarlos de memoria", "Estimarlos"], "correcta": 1, "explicacion": "Los parámetros legales cambian; solo se usan tras verificar su vigencia." },
+        { "pregunta": "Si el crédito fiscal del periodo es mayor que el débito fiscal:", "opciones": ["Se genera un saldo a favor, tratado según la normativa vigente", "Se paga la diferencia", "Se anula la declaración", "Se pierde siempre el crédito"], "correcta": 0, "explicacion": "El exceso se trata como saldo a favor conforme a las reglas vigentes." }
+      ],
+      "normas": [
+        { "id": "tuo-igv", "articulos": "Arts. 18 y 19 (requisitos del crédito fiscal) — por verificar" },
+        { "id": "reg-igv", "articulos": "" }
+      ]
+    },
+    { "id": "t02", "numero": 2, "titulo": "Impuesto a la Renta", "estado": "pendiente", "resumen": "Marco general del impuesto a la renta de empresas y su determinación.", "nota": "Pendiente de desarrollo.", "normas": ["tuo-lir", "reg-lir"] },
+    { "id": "t03", "numero": 3, "titulo": "Pagos a cuenta", "estado": "pendiente", "resumen": "Pagos a cuenta mensuales del impuesto a la renta.", "nota": "Pendiente de desarrollo. Los coeficientes y porcentajes deben verificarse antes de usarse.", "normas": ["tuo-lir", "reg-lir"] },
+    { "id": "t04", "numero": 4, "titulo": "Régimen MYPE Tributario", "estado": "pendiente", "resumen": "Características y requisitos del Régimen MYPE Tributario.", "nota": "Pendiente de desarrollo.", "normas": ["mype-trib"] },
+    { "id": "t05", "numero": 5, "titulo": "Régimen General", "estado": "pendiente", "resumen": "Características del Régimen General del impuesto a la renta.", "nota": "Pendiente de desarrollo.", "normas": ["tuo-lir"] },
+    { "id": "t06", "numero": 6, "titulo": "Régimen Especial", "estado": "pendiente", "resumen": "Características del Régimen Especial del impuesto a la renta.", "nota": "Pendiente de desarrollo. Identificar la norma exacta que lo regula.", "normas": ["tuo-lir"] },
+    { "id": "t07", "numero": 7, "titulo": "Nuevo RUS", "estado": "pendiente", "resumen": "Características y categorías del Nuevo Régimen Único Simplificado.", "nota": "Pendiente de desarrollo.", "normas": ["nrus"] },
+    {
+      "id": "t08",
+      "numero": 8,
+      "titulo": "Detracciones",
+      "estado": "desarrollado",
+      "fecha_elaboracion": "2026-11-18",
+      "ultima_revision": null,
+      "resumen": "Concepto del sistema de detracciones, sus actores y qué verificar en cada operación.",
+      "objetivo": "Entender qué es el sistema de detracciones, quiénes intervienen y qué verificaciones previas debe hacer el practicante, sin aplicar porcentajes ni montos que no estén verificados.",
+      "nota": "Los anexos, porcentajes y montos mínimos cambian con el tiempo. Este tema no los incluye: deben consultarse siempre en la norma vigente.",
+      "explicacion": [
+        { "titulo": "Concepto", "texto": "Es un mecanismo administrativo por el cual una parte del importe de ciertas operaciones se deposita en una cuenta del proveedor en el Banco de la Nación, para destinarla al pago de sus obligaciones tributarias." },
+        { "titulo": "Marco normativo", "texto": "Se rige por el Decreto Legislativo N.° 940 (con su TUO) y por las normas de la SUNAT que lo aplican. Verifique el texto y las modificaciones vigentes en la fuente oficial." },
+        { "titulo": "Actores", "texto": "Participan el proveedor o prestador (titular de la cuenta), el adquirente o usuario (según el caso, quien debe efectuar el depósito), la SUNAT y el Banco de la Nación." },
+        { "titulo": "Qué verificar en cada operación", "texto": "Si el bien o servicio figura en los anexos vigentes; el monto mínimo y el porcentaje aplicables; quién debe depositar y en qué momento. Todos estos datos se consultan en la norma vigente." }
+      ],
+      "procedimiento": [
+        "Identificar si el bien o servicio está sujeto al sistema según el anexo vigente.",
+        "Comparar el importe de la operación con los topes vigentes.",
+        "Determinar quién debe efectuar el depósito y en qué plazo.",
+        "Obtener y conservar la constancia de depósito.",
+        "Vincular la constancia con el comprobante de la operación."
+      ],
+      "ejemplos": [
+        { "titulo": "Caso de verificación (sin cifras)", "descripcion": "Llega una factura por un servicio. El practicante revisa si el servicio figura en el anexo vigente, consulta el porcentaje y el monto mínimo en la norma, y comunica al responsable si corresponde depósito. No aplica ningún porcentaje de memoria." }
+      ],
+      "errores": [
+        "Aplicar el porcentaje de una tabla antigua.",
+        "Pagar el total al proveedor sin considerar el depósito que corresponda.",
+        "No conservar la constancia de depósito.",
+        "Confundir las detracciones con las retenciones y percepciones."
+      ],
+      "recomendaciones": [
+        "Mantenga una referencia al anexo vigente consultada en la SUNAT, con la fecha de consulta.",
+        "Ante la duda sobre si una operación está sujeta, consulte al responsable tributario."
+      ],
+      "ejercicios": [
+        { "enunciado": "Explique la diferencia entre detracción y retención del IGV.", "solucion": "En la detracción, el depósito se realiza en la cuenta del proveedor en el Banco de la Nación para el pago de sus tributos. En la retención, el agente de retención retiene parte del IGV al proveedor y lo paga a la SUNAT." }
+      ],
+      "evaluacion": [
+        { "pregunta": "El depósito de la detracción se efectúa en una cuenta del proveedor en:", "opciones": ["Cualquier banco privado", "Una caja municipal", "El Banco de la Nación", "La cuenta del adquirente"], "correcta": 2, "explicacion": "Es una cuenta del proveedor en el Banco de la Nación." },
+        { "pregunta": "Para conocer el porcentaje aplicable a una operación se debe:", "opciones": ["Consultar la norma vigente", "Usar una tabla antigua", "Estimarlo", "Preguntar a un colega sin verificar"], "correcta": 0, "explicacion": "Los porcentajes cambian; se verifican en la fuente oficial." },
+        { "pregunta": "¿Qué documento conviene conservar siempre?", "opciones": ["Un mensaje de chat", "La constancia de depósito", "Ninguno", "Solo la cotización"], "correcta": 1, "explicacion": "Es el sustento del depósito efectuado." }
+      ],
+      "normas": ["detracciones"]
+    },
+    { "id": "t09", "numero": 9, "titulo": "Retenciones y percepciones", "estado": "pendiente", "resumen": "Regímenes de retenciones y percepciones del IGV.", "nota": "Pendiente de desarrollo. Normas por identificar y verificar en la SUNAT.", "normas": [] },
+    { "id": "t10", "numero": 10, "titulo": "SIRE", "estado": "pendiente", "resumen": "Sistema Integrado de Registros Electrónicos.", "nota": "Pendiente de desarrollo.", "normas": ["sire"] },
+    { "id": "t11", "numero": 11, "titulo": "Registro de Compras Electrónico", "estado": "pendiente", "resumen": "Registro de Compras Electrónico: obligados, estructura y presentación.", "nota": "Pendiente de desarrollo. Normas por identificar y verificar en la SUNAT.", "normas": [] },
+    { "id": "t12", "numero": 12, "titulo": "Registro de Ventas e Ingresos Electrónico", "estado": "pendiente", "resumen": "Registro de Ventas e Ingresos Electrónico: obligados, estructura y presentación.", "nota": "Pendiente de desarrollo. Normas por identificar y verificar en la SUNAT.", "normas": [] },
+    { "id": "t13", "numero": 13, "titulo": "Declaraciones mensuales", "estado": "pendiente", "resumen": "Declaraciones y pagos mensuales de obligaciones tributarias.", "nota": "Pendiente de desarrollo. Los plazos se consultan en el cronograma vigente de la SUNAT.", "normas": ["tuo-ct"] },
+    { "id": "t14", "numero": 14, "titulo": "Declaraciones anuales", "estado": "pendiente", "resumen": "Declaración jurada anual del impuesto a la renta y otras declaraciones anuales.", "nota": "Pendiente de desarrollo.", "normas": ["tuo-ct", "tuo-lir"] },
+    { "id": "t15", "numero": 15, "titulo": "Fiscalizaciones SUNAT", "estado": "pendiente", "resumen": "Procedimiento de fiscalización y derechos y obligaciones del contribuyente.", "nota": "Pendiente de desarrollo.", "normas": ["tuo-ct"] },
+    { "id": "t16", "numero": 16, "titulo": "Infracciones y sanciones tributarias", "estado": "pendiente", "resumen": "Infracciones y sanciones previstas en la normativa tributaria.", "nota": "Pendiente de desarrollo. Tablas y sanciones deben tomarse de la norma vigente.", "normas": ["tuo-ct"] },
+    { "id": "t17", "numero": 17, "titulo": "Bancarización", "estado": "pendiente", "resumen": "Uso de medios de pago y sus efectos tributarios.", "nota": "Pendiente de desarrollo.", "normas": ["ley-28194"] },
+    {
+      "id": "t18",
+      "numero": 18,
+      "titulo": "Comprobantes de pago electrónicos",
+      "estado": "desarrollado",
+      "fecha_elaboracion": "2026-11-18",
+      "ultima_revision": null,
+      "resumen": "Qué es un comprobante de pago, tipos habituales y qué verificar al recibirlo o emitirlo.",
+      "objetivo": "Reconocer los principales comprobantes de pago, su finalidad y qué verificar al recibirlos o registrarlos.",
+      "nota": "Los sistemas de emisión electrónica y sus obligados cambian con el tiempo. Confirme en la SUNAT cuál corresponde a cada contribuyente.",
+      "explicacion": [
+        { "titulo": "Concepto", "texto": "Son los documentos que acreditan la transferencia de bienes, la entrega en uso o la prestación de servicios. Su regulación base es el Reglamento de Comprobantes de Pago de la SUNAT y sus normas de emisión electrónica." },
+        { "titulo": "Tipos habituales", "texto": "Factura, boleta de venta, recibo por honorarios, y los documentos que modifican o acompañan operaciones, como las notas de crédito y de débito y las guías de remisión. Cada uno tiene un uso distinto." },
+        { "titulo": "Emisión electrónica", "texto": "La SUNAT regula distintos sistemas de emisión electrónica. Cuál debe usar un contribuyente depende de su situación y de las normas vigentes: debe verificarse caso por caso." },
+        { "titulo": "Qué revisar al recibir un comprobante", "texto": "Datos del emisor y del adquirente, tipo de comprobante, fecha, descripción, importes y que el comprobante sea válido en los medios oficiales de consulta de la SUNAT." }
+      ],
+      "procedimiento": [
+        "Verificar los datos del emisor y del adquirente.",
+        "Consultar la validez del comprobante en los medios oficiales de la SUNAT.",
+        "Comprobar que la descripción y los importes sean coherentes con la operación.",
+        "Registrar el comprobante en el periodo que corresponda.",
+        "Archivar el sustento digital o físico."
+      ],
+      "ejemplos": [
+        { "titulo": "Corrección de un importe ya facturado", "descripcion": "Si una factura ya emitida tiene un importe equivocado, la corrección se realiza con un documento que la modifique (por ejemplo, una nota de crédito o de débito, según el caso), no editando el comprobante original. Verifique las causales en el reglamento vigente." }
+      ],
+      "errores": [
+        "Registrar un comprobante sin validar su autenticidad.",
+        "Registrar comprobantes con razón social o datos del adquirente incorrectos.",
+        "Registrar una operación en un periodo que no corresponde.",
+        "Perder el sustento de comprobantes recibidos."
+      ],
+      "recomendaciones": [
+        "Solicite la corrección al proveedor apenas detecte un error en el comprobante.",
+        "Conserve los comprobantes en orden y con una referencia al asiento."
+      ],
+      "ejercicios": [
+        { "enunciado": "¿Qué documento corresponde usar para corregir el importe de una factura ya emitida?", "solucion": "Según el caso, una nota de crédito o de débito. Las causales y requisitos deben verificarse en el reglamento vigente." }
+      ],
+      "evaluacion": [
+        { "pregunta": "Un documento que acredita la transferencia de bienes o la prestación de servicios es:", "opciones": ["Una cotización", "Un comprobante de pago", "Un estado de cuenta", "Una orden interna"], "correcta": 1, "explicacion": "Esa es la función de los comprobantes de pago." },
+        { "pregunta": "Antes de registrar una factura de compra conviene:", "opciones": ["Validarla en los medios oficiales de la SUNAT", "Registrarla sin revisar", "Esperar una fiscalización", "Pedir copia al banco"], "correcta": 0, "explicacion": "La validación reduce el riesgo de registrar comprobantes no válidos." },
+        { "pregunta": "¿Qué sistema de emisión electrónica corresponde a un contribuyente?", "opciones": ["El que elija el practicante", "Siempre el mismo para todos", "Ninguno", "Depende de su situación y de la normativa vigente"], "correcta": 3, "explicacion": "Se verifica caso por caso en la SUNAT." }
+      ],
+      "normas": ["rcp"]
+    }
+  ]
+}

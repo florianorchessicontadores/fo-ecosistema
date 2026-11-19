@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FO Ecosistema Digital · Florian Orchessi &amp; Asociados</title>
+  <meta name="description" content="Plataforma de conocimiento, capacitación y herramientas profesionales de Florian Orchessi &amp; Asociados.">
+  <meta name="theme-color" content="#0B1F3A">
+  <!-- Favicon vacío para evitar errores 404. Se reemplazará cuando exista el logotipo oficial. -->
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#view">Saltar al contenido</a>
+
+  <div class="app">
+    <!-- ================= MENÚ LATERAL ================= -->
+    <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+      <div class="brand">
+        <!-- Espacio reservado para el logotipo oficial.
+             Para incorporarlo: copie el archivo en assets/images/ y escriba su ruta en data/site.json (campo "logo"). -->
+        <div class="logo-slot" id="logo-slot" title="Espacio reservado para el logotipo oficial"><span>LOGO</span></div>
+        <div class="brand-text">
+          <div class="brand-inst">FLORIAN ORCHESSI<br>&amp; ASOCIADOS</div>
+          <div class="brand-plat">FO ECOSISTEMA DIGITAL</div>
+        </div>
+      </div>
+      <nav class="nav" id="nav" aria-label="Secciones de la plataforma"></nav>
+      <div class="sidebar-foot" id="sidebar-foot"></div>
+    </aside>
+
+    <!-- ================= COLUMNA PRINCIPAL ================= -->
+    <div class="main-col">
+      <header class="topbar">
+        <button class="icon-btn" id="btn-menu" type="button" aria-label="Mostrar u ocultar el menú lateral" aria-controls="sidebar"></button>
+        <form class="search" id="search-form" role="search" autocomplete="off">
+          <span class="search-ico" id="search-ico" aria-hidden="true"></span>
+          <input id="search-input" type="search" placeholder="Buscar módulos, normas, herramientas…" aria-label="Buscador general">
+          <kbd aria-hidden="true">/</kbd>
+        </form>
+        <span class="chip-gold topbar-chip">Capacitación · contenido no confidencial</span>
+      </header>
+
+      <main id="view" tabindex="-1">
+        <div class="loading">Cargando plataforma…</div>
+      </main>
+
+      <footer class="footer" id="footer"></footer>
+    </div>
+  </div>
+  <div class="scrim" id="scrim"></div>
+
+  <noscript>
+    <p style="padding:2rem;font-family:sans-serif">Esta plataforma requiere JavaScript habilitado en el navegador.</p>
+  </noscript>
+
+  <!-- Aviso si se abre con doble clic (file://). Los navegadores bloquean los módulos JS y los JSON en ese modo. -->
+  <script>
+    if (location.protocol === 'file:') {
+      document.getElementById('view').innerHTML =
+        '<div style="max-width:640px;margin:3rem auto;padding:1.5rem;border:1px solid #E3E6EC;border-left:4px solid #B8903A;background:#fff;border-radius:10px;font-family:Segoe UI,sans-serif;line-height:1.6">' +
+        '<h2 style="margin-top:0;color:#0B1F3A">Abra la plataforma con un servidor local</h2>' +
+        '<p>Chrome y Edge bloquean la lectura de archivos cuando se abre <code>index.html</code> con doble clic.</p>' +
+        '<p><strong>En Visual Studio Code:</strong> instale la extensión <em>Live Server</em>, haga clic derecho sobre <code>index.html</code> y elija <em>Open with Live Server</em>.</p>' +
+        '<p>También funciona al publicarla en GitHub Pages (ver README.md).</p></div>';
+    }
+  </script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
