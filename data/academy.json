@@ -1,27 +1,88 @@
 {
-  "descripcion": "Capacitación para practicantes y asistentes: cursos por área, módulos progresivos, evaluaciones y una ruta de aprendizaje recomendada.",
+  "descripcion": "Capacitación para practicantes y asistentes: cursos por área organizados en niveles progresivos, curso de inducción, ruta de aprendizaje con evaluaciones por fase, resultados y recomendaciones.",
+  "cursos": [
+    {
+      "id": "induccion",
+      "titulo": "Inducción FO",
+      "area": "academy",
+      "icono": "academy",
+      "descripcion": "Cómo usar la plataforma, confidencialidad, verificación de normas y buenas prácticas de trabajo. Recomendado como primer curso.",
+      "niveles": [
+        { "titulo": "Nivel único · Inducción", "descripcion": "Cuatro lecciones introductorias.", "items": ["i01", "i02", "i03", "i04"] }
+      ]
+    },
+    {
+      "id": "contable",
+      "titulo": "Curso de Contabilidad",
+      "area": "contable",
+      "icono": "contable",
+      "descripcion": "De los fundamentos contables al cierre mensual y los estados financieros.",
+      "niveles": [
+        { "titulo": "Nivel 1 · Fundamentos", "descripcion": "Conceptos base y plan de cuentas.", "items": ["c01", "c05"] },
+        { "titulo": "Nivel 2 · Operación contable", "descripcion": "Registro de operaciones y control de bancos.", "items": ["c02", "c03", "c04", "c06"] },
+        { "titulo": "Nivel 3 · Control, cierre y reportes", "descripcion": "Análisis de cuentas, cierre, libros y estados financieros.", "items": ["c07", "c08", "c09", "c10"] }
+      ]
+    },
+    {
+      "id": "tributaria",
+      "titulo": "Curso de Tributación",
+      "area": "tributaria",
+      "icono": "tributaria",
+      "descripcion": "Impuestos, regímenes, registros electrónicos, declaraciones y fiscalización.",
+      "niveles": [
+        { "titulo": "Nivel 1 · Fundamentos tributarios", "descripcion": "IGV, impuesto a la renta, bancarización y comprobantes.", "items": ["t01", "t02", "t17", "t18"] },
+        { "titulo": "Nivel 2 · Regímenes y pagos", "descripcion": "Regímenes tributarios, pagos a cuenta, detracciones, retenciones y percepciones.", "items": ["t03", "t04", "t05", "t06", "t07", "t08", "t09"] },
+        { "titulo": "Nivel 3 · Registros y declaraciones", "descripcion": "SIRE, registros electrónicos y declaraciones.", "items": ["t10", "t11", "t12", "t13", "t14"] },
+        { "titulo": "Nivel 4 · Fiscalización y sanciones", "descripcion": "Fiscalizaciones, infracciones y sanciones.", "items": ["t15", "t16"] }
+      ]
+    },
+    {
+      "id": "laboral",
+      "titulo": "Curso Laboral",
+      "area": "laboral",
+      "icono": "laboral",
+      "descripcion": "Contratos, planillas, beneficios sociales, seguridad y salud y fiscalización laboral.",
+      "niveles": [
+        { "titulo": "Nivel 1 · Vínculo laboral", "descripcion": "Contratos, regímenes, T-Registro y obligaciones del empleador.", "items": ["l01", "l02", "l03", "l18"] },
+        { "titulo": "Nivel 2 · Planillas y remuneraciones", "descripcion": "Planillas, PLAME, remuneraciones, asignación familiar y horas extras.", "items": ["l04", "l05", "l06", "l07", "l08"] },
+        { "titulo": "Nivel 3 · Beneficios sociales", "descripcion": "Vacaciones, gratificaciones, CTS, liquidación, suspensión y subsidios.", "items": ["l09", "l10", "l11", "l12", "l13", "l14"] },
+        { "titulo": "Nivel 4 · Seguridad y fiscalización", "descripcion": "Seguridad y salud, fiscalizaciones e infracciones laborales.", "items": ["l15", "l16", "l17"] }
+      ]
+    }
+  ],
   "ruta": [
     {
+      "id": "fase-0",
+      "fase": "Fase 0 · Inducción",
+      "descripcion": "Orientación en la plataforma, confidencialidad y método de trabajo.",
+      "items": ["i01", "i02", "i03", "i04"]
+    },
+    {
+      "id": "fase-1",
       "fase": "Fase 1 · Fundamentos",
       "descripcion": "Conceptos base de contabilidad y tributación antes de operar con documentos reales.",
       "items": ["c01", "c05", "t01", "t18"]
     },
     {
+      "id": "fase-2",
       "fase": "Fase 2 · Operación contable",
       "descripcion": "Registro de operaciones y control de bancos.",
       "items": ["c02", "c03", "c04", "c06"]
     },
     {
+      "id": "fase-3",
       "fase": "Fase 3 · Obligaciones tributarias y registros",
       "descripcion": "Registros electrónicos, detracciones y declaraciones.",
       "items": ["t08", "t10", "t11", "t12", "t13"]
     },
     {
+      "id": "fase-4",
       "fase": "Fase 4 · Planillas y obligaciones laborales",
       "descripcion": "Contratos, T-Registro, planillas y beneficios.",
       "items": ["l01", "l03", "l04", "l05", "l09"]
     },
     {
+      "id": "fase-5",
       "fase": "Fase 5 · Cierre, control y reportes",
       "descripcion": "Análisis de cuentas, cierre mensual y estados financieros.",
       "items": ["c07", "c08", "c09", "c10", "t14"]

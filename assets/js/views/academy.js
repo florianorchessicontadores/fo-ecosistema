@@ -1,98 +1,81 @@
 /* =====================================================
-   views/academy.js · FO Academy
-   Cursos por área, ruta de aprendizaje, resultados y recomendaciones.
-   Los módulos y evaluaciones se leen de data/contable|tributaria|laboral.json
-   y la ruta se define en data/academy.json.
+   views/academy.js · FO Academy (pantalla principal)
+   Cursos por área, ruta de aprendizaje con evaluaciones de fase
+   y acceso a resultados. Los datos vienen de data/academy.json.
    ===================================================== */
 import { DB } from '../data.js';
 import { Progress } from '../progress.js';
 import { icon } from '../icons.js';
-import { esc, fmtDate, $ } from '../utils.js';
-import { pageHead, sectionHead, itemRow, progressBar, badge, callout, empty, list } from '../components.js';
+import { esc } from '../utils.js';
+import { pageHead, sectionHead, itemRow, progressBar, badge, callout } from '../components.js';
+import { cursoItems, summarize, nextModule, faseDisponible, faseQuiz, phasePool, recommendations, MIN_PREGUNTAS } from '../academyLogic.js';
 
 export function academyView() {
   const s = DB.site;
+  const overall = Progress.overall();
 
-  /* Ruta de aprendizaje */
-  const ruta = (DB.academy.ruta || [])
-    .map((f) => {
-      const rows = f.items.map((id) => DB.items.get(id)).filter(Boolean).map(itemRow).join('');
-      return `<div class="phase"><h3>${esc(f.fase)}</h3><p class="muted small" style="margin-bottom:6px">${esc(f.descripcion)}</p>${rows}</div>`;
-    })
-    .join('');
+  /* Continuar donde quedó */
+  const nx = nextModule();
+  const continuar = nx
+    ? `<div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <div><div class="eyebrow" style="margin:0 0 4px">Continuar</div><strong>${esc(nx.titulo)}</strong>
+          <div class="small muted">${esc(DB.areaMeta[nx.area].corto)} · ${esc(DB.areaMeta[nx.area].etiqueta_item)} ${esc(nx.numero)}</div></div>
+        <a class="btn btn-primary" href="${nx.ruta}">${icon('arrow', 18)} ${Progress.hasAny() ? 'Continuar' : 'Comenzar'}</a></div>`
+    : callout('Ha completado todos los módulos disponibles. Los nuevos contenidos se publicarán por etapas.', 'ok');
 
-  /* Cursos por área */
-  const cursos = s.areas
-    .map((a) => {
-      const sm = Progress.areaSummary(a.id);
-      const rows = DB.areaContent[a.id].items.map(itemRow).join('');
+  /* Cursos */
+  const cursos = (DB.academy.cursos || [])
+    .map((c) => {
+      const sm = summarize(cursoItems(c));
       return `<div class="card">
-        <div class="card-ico">${icon(a.icono, 22)}</div>
-        <h3>Curso: ${esc(a.titulo.replace('Área ', ''))}</h3>
-        <p class="muted small">${esc(a.descripcion)}</p>
-        ${progressBar(sm.pct, `${sm.completados} de ${sm.disponibles} módulos disponibles completados`)}
-        <details style="margin-top:12px"><summary style="cursor:pointer;font-weight:600;color:var(--navy-800)">Ver ${sm.total} ${esc(a.etiqueta_item.toLowerCase())}s</summary>${rows}</details>
+        <div class="card-ico">${icon(c.icono, 22)}</div>
+        <h3>${esc(c.titulo)}</h3>
+        <p class="muted small">${esc(c.descripcion)}</p>
+        <div class="small muted" style="margin-bottom:8px">${c.niveles.length} nivel${c.niveles.length === 1 ? '' : 'es'} · ${sm.disponibles} de ${sm.total} módulos con contenido</div>
+        ${progressBar(sm.pct, `${sm.completados} de ${sm.disponibles} completados`)}
+        <div class="btn-row"><a class="btn btn-outline btn-sm" href="#/academy/curso/${esc(c.id)}">Ver curso ${icon('arrow', 14)}</a></div>
       </div>`;
     })
     .join('');
 
-  /* Resultados de evaluaciones (guardados en este navegador) */
-  const evaluated = [...DB.items.values()].filter((i) => Progress.get(i.id).quiz);
-  const resultados = evaluated.length
-    ? `<div class="table-wrap"><table class="table" style="min-width:520px"><thead><tr><th>Módulo</th><th>Resultado</th><th>Fecha</th><th>Estado</th></tr></thead><tbody>
-        ${evaluated
-          .map((i) => {
-            const q = Progress.get(i.id).quiz;
-            const ok = q.score / q.total >= s.aprobacion_minima;
-            return `<tr><td><a href="${i.ruta}">${esc(i.titulo)}</a></td><td>${q.score} de ${q.total}</td><td>${esc(fmtDate(q.date))}</td>
-              <td>${Progress.isCompleted(i) ? badge('Completado', 'ok') : ok ? badge('Aprobado · falta marcar estudiado', 'gold') : badge('Por reforzar', 'warn')}</td></tr>`;
-          })
-          .join('')}</tbody></table></div>`
-    : empty('Aún no hay evaluaciones resueltas en este navegador.', 'list');
+  /* Ruta de aprendizaje con evaluación de fase */
+  const ruta = (DB.academy.ruta || [])
+    .map((f) => {
+      const rows = f.items.map((id) => DB.items.get(id)).filter(Boolean).map(itemRow).join('');
+      const q = faseQuiz(f);
+      const examen = faseDisponible(f)
+        ? `<div class="btn-row" style="margin-top:8px"><a class="btn btn-outline btn-sm" href="#/academy/evaluacion/${esc(f.id)}">${icon('list', 14)} Evaluación de la fase</a>
+            ${q ? badge(`Último resultado: ${q.score} de ${q.total}`, q.score / q.total >= s.aprobacion_minima ? 'ok' : 'warn') : ''}</div>`
+        : `<p class="small muted" style="margin:8px 0 0">Evaluación de fase disponible cuando haya al menos ${MIN_PREGUNTAS} preguntas en sus módulos (hoy: ${phasePool(f).length}).</p>`;
+      return `<div class="phase"><h3>${esc(f.fase)}</h3><p class="muted small" style="margin-bottom:6px">${esc(f.descripcion)}</p>${rows}${examen}</div>`;
+    })
+    .join('');
 
-  /* Siguiente módulo recomendado: primero disponible que no esté completado */
-  const siguiente = [...DB.items.values()]
-    .filter((i) => i.estado === 'desarrollado' && !Progress.isCompleted(i))
-    .sort((a, b) => ordenRuta(a.id) - ordenRuta(b.id))[0];
-
-  function ordenRuta(id) {
-    const flat = (DB.academy.ruta || []).flatMap((f) => f.items);
-    const k = flat.indexOf(id);
-    return k === -1 ? 999 : k;
-  }
-
-  const reco = `${
-    siguiente
-      ? callout(`<strong>Siguiente módulo sugerido:</strong> <a href="${siguiente.ruta}">${esc(siguiente.titulo)}</a>`, 'ok')
-      : callout('Ha completado todos los módulos disponibles. Los nuevos contenidos se publicarán por etapas.', 'ok')
-  }${list(DB.academy.recomendaciones || [])}`;
+  /* Recomendaciones (resumen) */
+  const recs = recommendations().slice(0, 4);
+  const recHtml = recs.length
+    ? recs.map((r) => `<a class="row-item" href="${esc(r.ruta)}"><span class="row-body"><span class="row-title">${esc(r.texto)}</span></span>${badge(r.tipo, r.cls)}${icon('chevron', 16)}</a>`).join('')
+    : '<p class="placeholder">Sin recomendaciones por ahora.</p>';
 
   const html = `${pageHead({
     eyebrow: 'Capacitación',
     title: 'FO Academy',
     lead: DB.academy.descripcion,
-    meta: `${badge('Etapa 1: estructura y ruta', 'gold')}${badge('Etapa 2: cursos completos (pendiente)', 'muted')}`,
+    meta: `${badge('Etapa 2', 'gold')}${badge(`Avance general: ${overall.pct}%`, 'muted')}`,
   })}
   ${callout('El progreso y los resultados se guardan <strong>solo en este navegador</strong>. No existe un sistema de usuarios: no es un registro oficial ni debe usarse como tal. Un seguimiento institucional requiere un backend (etapas futuras).', 'warn')}
+  ${continuar}
 
-  <section class="section">${sectionHead('Ruta de aprendizaje para nuevos practicantes')}<div>${ruta}</div></section>
-  <section class="section">${sectionHead('Cursos por área')}<div class="grid grid-3">${cursos}</div></section>
+  <section class="section">${sectionHead('Cursos')}<div class="grid grid-auto">${cursos}</div></section>
+
   <section class="section"><div class="grid grid-2">
-    <div>${sectionHead('Resultados de evaluaciones')}${resultados}
-      <div class="btn-row"><button class="btn btn-outline btn-sm" type="button" id="btn-reset">${icon('refresh', 16)} Borrar progreso de este navegador</button></div></div>
-    <div>${sectionHead('Recomendaciones de aprendizaje')}<div class="card">${reco}</div></div>
+    <div>${sectionHead('Ruta de aprendizaje para nuevos practicantes')}${ruta}</div>
+    <div>${sectionHead('Recomendaciones', '<a href="#/academy/resultados">Resultados completos</a>')}
+      <div class="card">${recHtml}
+        <div class="btn-row"><a class="btn btn-primary btn-sm" href="#/academy/resultados">${icon('list', 14)} Ver mis resultados</a></div></div>
+      <div class="card" style="margin-top:18px"><h3>Consejos de estudio</h3><ul class="list" style="margin:0">${(DB.academy.recomendaciones || []).map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>
+    </div>
   </div></section>`;
 
-  return {
-    title: 'FO Academy',
-    html,
-    mount(root) {
-      $('#btn-reset', root).addEventListener('click', () => {
-        if (window.confirm('¿Borrar el progreso y los resultados guardados en este navegador?')) {
-          Progress.reset();
-          location.reload();
-        }
-      });
-    },
-  };
+  return { title: 'FO Academy', html };
 }

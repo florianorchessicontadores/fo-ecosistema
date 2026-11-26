@@ -58,8 +58,27 @@ export function progressBar(value, label = '') {
     <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${value}"><i style="width:${value}%"></i></div></div>`;
 }
 
+/** Estado de avance de un módulo para mostrar en listas (Academy, cursos). */
+export function itemStatus(item) {
+  if (item.estado !== 'desarrollado') return { code: 'pendiente', t: 'Pendiente de desarrollo', c: 'muted' };
+  const st = Progress.get(item.id);
+  if (Progress.isCompleted(item)) return { code: 'completado', t: 'Completado', c: 'ok' };
+  if (st.quiz && st.quiz.score / st.quiz.total < DB.site.aprobacion_minima) return { code: 'reforzar', t: 'Por reforzar', c: 'warn' };
+  if (st.studied || st.quiz) return { code: 'en_curso', t: 'En curso', c: 'gold' };
+  return { code: 'sin_iniciar', t: 'Sin iniciar', c: 'navy' };
+}
+
+export const statusBadge = (item) => {
+  const s = itemStatus(item);
+  return badge(s.t, s.c);
+};
+
 /** Línea con fecha de elaboración y estado de revisión de un contenido. */
 export function revisionBadges(item) {
+  if (item.sin_normativa) {
+    // Contenido institucional (inducción): no cita normas, no requiere revisión normativa.
+    return `${badge('Contenido institucional', 'gold')}${item.fecha_elaboracion ? badge(`Elaborado: ${fmtDate(item.fecha_elaboracion)}`, 'muted') : ''}`;
+  }
   const out = [];
   out.push(item.estado === 'desarrollado' ? badge('Contenido inicial', 'gold') : badge('Pendiente de desarrollo', 'muted'));
   if (item.fecha_elaboracion) out.push(badge(`Elaborado: ${fmtDate(item.fecha_elaboracion)}`, 'muted'));

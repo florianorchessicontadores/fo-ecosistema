@@ -107,13 +107,15 @@ export function itemView(areaId, id) {
   }
 
   /* --- Módulo con contenido inicial --- */
-  const nav = SECCIONES.map(([k, t], i) => `<button class="chip" type="button" data-go="sec-${k}">${i + 1}. ${esc(t)}</button>`).join('');
-  const body = SECCIONES.map(
+  // Una lección puede declarar "secciones" para mostrar solo algunas (p. ej. inducción sin capturas ni normas).
+  const secs = it.secciones ? SECCIONES.filter(([k]) => it.secciones.includes(k)) : SECCIONES;
+  const nav = secs.map(([k, t], i) => `<button class="chip" type="button" data-go="sec-${k}">${i + 1}. ${esc(t)}</button>`).join('');
+  const body = secs.map(
     ([k, t], i) => `<section class="doc-sec" id="sec-${k}"><h2><span class="sec-num">${i + 1}</span>${esc(t)}</h2>${sectionBody(k, it)}</section>`
   ).join('');
 
   const html = `${head}
-    ${callout(esc(AVISO_NORMATIVO), 'warn')}
+    ${it.sin_normativa ? '' : callout(esc(AVISO_NORMATIVO), 'warn')}
     ${it.nota ? callout(esc(it.nota)) : ''}
     <div class="doc-nav"><div class="chips">${nav}</div></div>
     ${body}

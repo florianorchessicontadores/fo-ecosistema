@@ -3,7 +3,7 @@
 
 Plataforma de conocimiento, capacitación y herramientas profesionales. Sitio estático (HTML, CSS y JavaScript, con contenidos en archivos JSON). Sin backend, sin base de datos y sin instalaciones.
 
-**Versión actual: Etapa 1** (estructura, diseño institucional, menú, panel de inicio y las áreas Contable, Tributaria y Laboral). Las etapas 2 a 5 tienen su estructura preparada.
+**Versión actual: Etapa 2** (incluye la Etapa 1: estructura, diseño institucional, menú, panel de inicio y las áreas Contable, Tributaria y Laboral; y la Etapa 2: FO Academy completa). Las etapas 3 a 5 tienen su estructura preparada.
 
 ---
 
@@ -46,10 +46,11 @@ FO-ECOSISTEMA/
 │   │   ├── shell.js           Menú lateral, barra superior, pie
 │   │   ├── search.js          Buscador general
 │   │   ├── progress.js        Progreso de capacitación (solo local)
+│   │   ├── academyLogic.js    Reglas de FO Academy: avance, evaluaciones de fase, recomendaciones
 │   │   ├── components.js      Piezas reutilizables (tablas de normas, avisos…)
 │   │   ├── icons.js           Iconos SVG
 │   │   ├── utils.js           Funciones de apoyo
-│   │   └── views/             Una vista por pantalla (home, area, item, academy, …)
+│   │   └── views/             Una vista por pantalla (home, area, item, academy, course, exam, results, …)
 │   ├── images/                Logotipo y gráficos
 │   ├── icons/                 Reservado para iconos propios
 │   └── docs/                  Biblioteca Profesional (una carpeta por categoría)
@@ -58,7 +59,8 @@ FO-ECOSISTEMA/
 │   ├── contable.json          Módulos del Área Contable
 │   ├── tributaria.json        Temas del Área Tributaria
 │   ├── laboral.json           Temas del Área Laboral
-│   ├── academy.json           Ruta de aprendizaje y recomendaciones
+│   ├── academy.json           Cursos (niveles), ruta de aprendizaje por fases y consejos
+│   ├── induccion.json         Curso de inducción (4 lecciones con evaluación)
 │   ├── normativa.json         Catálogo de normas, fuentes y novedades
 │   ├── tools.json             Diseño de las herramientas (FO Tools)
 │   └── biblioteca.json        Categorías y documentos de la biblioteca
@@ -128,13 +130,22 @@ Revisa JSON válido, normas citadas que no existan, preguntas mal configuradas, 
 
 ---
 
-## 5. Qué contiene la Etapa 1
+## 5. Qué contiene la plataforma (Etapas 1 y 2)
 
 - **Estructura completa:** menú lateral desplegable (contraíble en PC; panel superpuesto en tablet), buscador general (atajo `/`), rutas, pie y diseño responsive.
 - **Panel de inicio:** bienvenida, accesos a las tres áreas, últimos módulos, normativa y novedades, herramientas, ruta de aprendizaje e indicadores de progreso.
 - **Área Contable (10 módulos), Tributaria (18 temas) y Laboral (18 temas).** Cada ficha tiene la estructura solicitada (objetivo, explicación, procedimiento, capturas, ejemplos, errores, recomendaciones, ejercicios, evaluación y referencias normativas).
 - **Contenido inicial (9 temas)** de carácter conceptual: Contable 1, 5 y 6; Tributaria: IGV, Detracciones y Comprobantes de pago electrónicos; Laboral: Contratos de trabajo, Alta y baja en T-Registro y Vacaciones. **Los demás están marcados «Pendiente de desarrollo»** y no tienen contenido legal inventado.
-- **FO Academy, FO Tools, Biblioteca y Normativa:** ya navegables. Academy funciona (ruta, evaluaciones, resultados); Tools muestra las fichas de diseño de las 8 herramientas; Biblioteca y Normativa tienen su estructura y catálogo.
+- **FO Tools, Biblioteca y Normativa:** ya navegables. Tools muestra las fichas de diseño de las 8 herramientas; Biblioteca y Normativa tienen su estructura y catálogo.
+
+### FO Academy (Etapa 2)
+- **4 cursos con niveles progresivos:** Inducción FO, Contabilidad, Tributación y Laboral. Cada módulo se asigna a un nivel en `data/academy.json` (el validador comprueba que ninguno quede sin asignar o repetido).
+- **Curso de Inducción (4 lecciones, con evaluación):** cómo usar la plataforma, confidencialidad y seguridad, cómo verificar una norma en la fuente oficial, y buenas prácticas de papeles de trabajo. Es contenido institucional de buenas prácticas, sin citas normativas. **Debe revisarlo el contador responsable** y ajustarlo a las políticas internas del estudio.
+- **Ruta de aprendizaje por fases (Fase 0 a 5)** con **evaluación por fase**: se sortean hasta 8 preguntas de los módulos de la fase; aparece cuando la fase reúne al menos 3 preguntas.
+- **Mis resultados:** módulos completados, evaluaciones, promedio, avance por curso y **recomendaciones personalizadas** (reforzar, evaluar, completar, evaluación de fase, siguiente módulo).
+- La progresión por niveles es una **recomendación, no un bloqueo**: sin sistema de usuarios no puede haber control de acceso real.
+- Las evaluaciones son **autoevaluaciones de capacitación**: no son exámenes oficiales ni certifican conocimientos.
+- A medida que desarrolle los módulos pendientes (cambiando su `estado` a `desarrollado` y agregando su contenido), los cursos, las evaluaciones de fase y las recomendaciones los incorporan solos.
 
 ### Reglas de contenido aplicadas
 - No se incluyen tasas, porcentajes, plazos ni montos legales. Donde hacen falta, el texto indica que deben verificarse.
@@ -153,7 +164,7 @@ Revisa JSON válido, normas citadas que no existan, preguntas mal configuradas, 
 | Etapa | Alcance | Estado |
 |---|---|---|
 | 1 | Estructura, diseño, menú, inicio y las tres áreas | **Completada** |
-| 2 | FO Academy: cursos completos y más evaluaciones | Estructura preparada |
+| 2 | FO Academy: cursos por niveles, inducción, evaluaciones por fase, resultados y recomendaciones | **Completada** (el contenido crece con los módulos pendientes) |
 | 3 | FO Tools: calculadoras (tras verificar parámetros legales) | Fichas de diseño listas |
 | 4 | Biblioteca Profesional y Normativa y Actualizaciones | Estructura preparada |
 | 5 | Integraciones con sistemas internos y API de SUNAT | Pendiente (requiere backend y manejo seguro de credenciales) |

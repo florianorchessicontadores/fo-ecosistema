@@ -8,7 +8,8 @@ import { Progress } from '../progress.js';
 import { esc, fmtDate } from '../utils.js';
 import { icon } from '../icons.js';
 
-export function quizHtml(item) {
+/** opts.nota (opcional): reemplaza el texto introductorio de la evaluación. */
+export function quizHtml(item, opts = {}) {
   const qs = item.evaluacion || [];
   if (!qs.length) return '<p class="placeholder">Evaluación pendiente de incorporar.</p>';
 
@@ -18,7 +19,8 @@ export function quizHtml(item) {
     ? `<p class="small muted">Último resultado en este navegador: <strong>${last.score} de ${last.total}</strong> (${esc(fmtDate(last.date))}).</p>`
     : '';
 
-  return `<p class="muted small">Puntaje mínimo para considerar el módulo completado: ${min}%. Es un parámetro interno de capacitación (editable en <code>data/site.json</code>).</p>
+  const nota = opts.nota || `Puntaje mínimo para considerar el módulo completado: ${min}%. Es un parámetro interno de capacitación (editable en <code>data/site.json</code>).`;
+  return `<p class="muted small">${nota}</p>
   ${lastHtml}
   <form id="quiz-form" novalidate>
     ${qs

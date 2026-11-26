@@ -29,7 +29,8 @@ const normativa = leer('data/normativa.json');
 const academy = leer('data/academy.json');
 const tools = leer('data/tools.json');
 const biblioteca = leer('data/biblioteca.json');
-if (!site || !normativa || !academy || !tools || !biblioteca) finish();
+const induccion = leer('data/induccion.json');
+if (!site || !normativa || !academy || !tools || !biblioteca || !induccion) finish();
 
 const normas = new Set();
 for (const n of normativa.normas) {
@@ -41,8 +42,9 @@ for (const n of normativa.normas) {
 }
 
 const items = new Map();
-for (const area of site.areas) {
-  const data = leer(`data/${area.id}.json`);
+const fuentes = [...site.areas.map((a) => ({ id: a.id, data: null })), { id: 'induccion', data: induccion }];
+for (const area of fuentes) {
+  const data = area.data || leer(`data/${area.id}.json`);
   if (!data) continue;
   for (const it of data.items) {
     if (items.has(it.id)) err(`ID repetido «${it.id}»`);
@@ -64,7 +66,24 @@ for (const area of site.areas) {
   (data.normas_marco || []).forEach((id) => !normas.has(id) && err(`${area.id}.json: norma_marco inexistente «${id}»`));
 }
 
-for (const f of academy.ruta) for (const id of f.items) if (!items.has(id)) err(`academy.json: la ruta menciona un módulo inexistente «${id}»`);
+const fasesIds = new Set();
+for (const f of academy.ruta) {
+  if (!f.id || fasesIds.has(f.id)) err(`academy.json: fase sin id o con id repetido «${f.id}»`);
+  fasesIds.add(f.id);
+  for (const id of f.items) if (!items.has(id)) err(`academy.json: la ruta menciona un módulo inexistente «${id}»`);
+}
+// Cada módulo debe pertenecer a exactamente un nivel de un curso
+const asignados = new Map();
+for (const c of academy.cursos || []) {
+  for (const n of c.niveles) for (const id of n.items) {
+    if (!items.has(id)) err(`academy.json: el curso «${c.id}» menciona un módulo inexistente «${id}»`);
+    asignados.set(id, (asignados.get(id) || 0) + 1);
+  }
+}
+for (const id of items.keys()) {
+  const k = asignados.get(id) || 0;
+  if (k !== 1) err(`academy.json: el módulo «${id}» está en ${k} niveles de cursos (debe estar en exactamente uno)`);
+}
 for (const t of tools.herramientas) for (const r of t.normas || []) if (!normas.has(r.id)) err(`tools.json: ${t.id} cita una norma inexistente «${r.id}»`);
 for (const c of biblioteca.categorias) {
   if (!existsSync(join(root, c.carpeta))) err(`biblioteca.json: no existe la carpeta ${c.carpeta}`);

@@ -1,0 +1,201 @@
+{
+  "area": "academy",
+  "intro": "Curso de inducción para nuevos practicantes y asistentes. Es contenido institucional de buenas prácticas, no normativo: no cita normas ni cifras legales.",
+  "items": [
+    {
+      "id": "i01",
+      "numero": 1,
+      "titulo": "Cómo usar FO Ecosistema Digital",
+      "estado": "desarrollado",
+      "fecha_elaboracion": "2026-11-19",
+      "ultima_revision": null,
+      "sin_normativa": true,
+      "secciones": ["objetivo", "explicacion", "procedimiento", "ejemplos", "errores", "recomendaciones", "ejercicios", "evaluacion"],
+      "resumen": "Cómo está organizada la plataforma, qué significan los estados de contenido y cómo se registra el progreso.",
+      "objetivo": "Orientarse en la plataforma: saber dónde está cada contenido, interpretar los estados de cada módulo y entender cómo funciona el seguimiento del progreso.",
+      "explicacion": [
+        { "titulo": "Áreas y secciones", "texto": "Las áreas Contable, Tributaria y Laboral contienen los módulos y temas. FO Academy ordena el aprendizaje, FO Tools reunirá las herramientas, la Biblioteca guarda material de trabajo y Normativa y Actualizaciones reúne las fuentes oficiales." },
+        { "titulo": "Estados de un contenido", "texto": "«Contenido inicial» significa que hay material de capacitación disponible. «Pendiente de desarrollo» significa que el espacio está reservado pero aún no tiene contenido. Un contenido pendiente nunca debe usarse como guía de trabajo." },
+        { "titulo": "Revisión normativa", "texto": "Cuando un módulo muestra «Revisión normativa pendiente», sus referencias aún no fueron verificadas por una persona. Hay que contrastarlas con la fuente oficial antes de aplicarlas." },
+        { "titulo": "Progreso personal", "texto": "Al marcar un módulo como estudiado y aprobar su evaluación, queda completado. Ese avance se guarda solo en el navegador que usa; no es un registro oficial y se pierde si borra los datos del navegador." },
+        { "titulo": "Buscador", "texto": "El buscador general encuentra módulos, normas, herramientas y secciones sin importar las tildes. Se activa también con la tecla «/»." }
+      ],
+      "procedimiento": [
+        "Recorra el menú lateral para ubicar cada sección.",
+        "Abra FO Academy y revise la ruta de aprendizaje.",
+        "Comience por la Fase 0 (Inducción) y continúe con la Fase 1.",
+        "Estudie cada módulo, resuelva sus ejercicios y rinda su evaluación.",
+        "Marque el módulo como estudiado al terminar."
+      ],
+      "ejemplos": [
+        { "titulo": "Un módulo con revisión pendiente", "descripcion": "Un practicante abre un tema que indica «Revisión normativa pendiente». Antes de aplicar lo leído en un trabajo, abre la fuente oficial citada y confirma que la norma sigue vigente." }
+      ],
+      "errores": [
+        "Usar un tema «Pendiente de desarrollo» como si fuera una guía validada.",
+        "Considerar el progreso de la plataforma como un registro oficial de capacitación.",
+        "Estudiar los módulos sin seguir el orden de la ruta de aprendizaje."
+      ],
+      "recomendaciones": [
+        "Avance con la ruta de aprendizaje: está pensada de lo básico a lo avanzado.",
+        "Anote sus dudas y consúltelas con el responsable del área.",
+        "Repita las evaluaciones en las que no alcance el puntaje mínimo."
+      ],
+      "ejercicios": [
+        { "enunciado": "Un módulo aparece como «Pendiente de desarrollo». ¿Puede usarse para resolver un trabajo? Explique.", "solucion": "No. Ese espacio está reservado y no tiene contenido validado; se debe consultar al responsable y a la fuente oficial." }
+      ],
+      "evaluacion": [
+        { "pregunta": "¿Qué significa «Pendiente de desarrollo»?", "opciones": ["Que el contenido está desactualizado", "Que el espacio está reservado pero aún no tiene contenido", "Que el módulo fue derogado", "Que el módulo está aprobado"], "correcta": 1, "explicacion": "Es un espacio reservado sin contenido incorporado." },
+        { "pregunta": "El progreso de la plataforma se guarda:", "opciones": ["En un sistema oficial con usuarios", "En la SUNAT", "Solo en el navegador de cada persona", "En el repositorio de GitHub"], "correcta": 2, "explicacion": "No existe sistema de usuarios: es un seguimiento local y no oficial." },
+        { "pregunta": "Si un módulo dice «Revisión normativa pendiente», lo correcto es:", "opciones": ["Aplicarlo sin más", "Contrastar sus referencias con la fuente oficial antes de aplicarlas", "Ignorar el módulo", "Borrar el módulo"], "correcta": 1, "explicacion": "Las referencias aún no fueron verificadas por una persona." }
+      ]
+    },
+    {
+      "id": "i02",
+      "numero": 2,
+      "titulo": "Confidencialidad y seguridad de la información",
+      "estado": "desarrollado",
+      "fecha_elaboracion": "2026-11-19",
+      "ultima_revision": null,
+      "sin_normativa": true,
+      "secciones": ["objetivo", "explicacion", "procedimiento", "ejemplos", "errores", "recomendaciones", "ejercicios", "evaluacion"],
+      "resumen": "Qué información no debe compartirse ni almacenarse, y cómo proteger los datos de los clientes.",
+      "objetivo": "Reconocer qué información es confidencial, cómo manejarla en el trabajo diario y qué hacer ante una duda o un incidente.",
+      "nota": "Este contenido describe buenas prácticas generales. Siga siempre las políticas internas del estudio, que prevalecen sobre este material.",
+      "explicacion": [
+        { "titulo": "Qué es información confidencial", "texto": "Todo dato de clientes y trabajadores: RUC, razón social, claves de acceso, comprobantes, planillas, estados de cuenta, contratos y cualquier documento que no sea público." },
+        { "titulo": "Credenciales", "texto": "Las claves de acceso, como la clave SOL, son personales del contribuyente o su representante. No se comparten por chat ni correo, no se anotan en papeles visibles y no se guardan en archivos de la plataforma." },
+        { "titulo": "Datos en material de capacitación", "texto": "Los ejemplos, capturas y casos de esta plataforma deben usar datos ficticios. Todo lo que se publica en un sitio público puede ser visto por cualquier persona." },
+        { "titulo": "Canales de trabajo", "texto": "Los documentos del trabajo se manejan por los canales autorizados por el estudio. Evite enviar información de clientes por medios personales no autorizados." },
+        { "titulo": "Ante una duda o un incidente", "texto": "Si envió un archivo a la persona equivocada, perdió un equipo o sospecha un acceso indebido, avise de inmediato al responsable; no espere a resolverlo por su cuenta." }
+      ],
+      "procedimiento": [
+        "Antes de compartir un documento, pregúntese si contiene datos de clientes o trabajadores.",
+        "Si va a usarlo como ejemplo, reemplace los datos reales por datos ficticios.",
+        "Bloquee la pantalla de su equipo al ausentarse.",
+        "Envíe documentos solo por canales autorizados y a las personas que corresponde.",
+        "Ante cualquier incidente, avise al responsable de inmediato."
+      ],
+      "ejemplos": [
+        { "titulo": "Captura de pantalla para capacitación", "descripcion": "Un practicante quiere agregar una captura de un sistema contable a un módulo. La captura muestra el RUC y el nombre de un cliente real. Debe rehacerla con una empresa ficticia o cubrir los datos antes de publicarla." }
+      ],
+      "errores": [
+        "Pedir o enviar una clave de acceso por mensaje.",
+        "Subir a un repositorio público un archivo con datos reales.",
+        "Dejar documentos de clientes visibles en la pantalla o el escritorio.",
+        "Callar un error de envío por temor a las consecuencias."
+      ],
+      "recomendaciones": [
+        "Ante la duda, trate la información como confidencial.",
+        "Use datos ficticios en todo material de capacitación.",
+        "Reporte pronto: un aviso a tiempo permite limitar el daño."
+      ],
+      "ejercicios": [
+        { "enunciado": "Un compañero le pide por chat la clave de acceso de un cliente para «avanzar rápido». ¿Qué hace?", "solucion": "No la comparte. Las credenciales son personales; si se necesita un acceso, se coordina con el responsable por el procedimiento autorizado." }
+      ],
+      "evaluacion": [
+        { "pregunta": "¿Se pueden usar datos reales de clientes en el material de capacitación?", "opciones": ["Sí, si son pocos", "Sí, si es una captura pequeña", "No: se usan datos ficticios", "Solo con el nombre cubierto"], "correcta": 2, "explicacion": "El material de capacitación debe usar datos ficticios." },
+        { "pregunta": "Si envió por error un archivo a una persona equivocada, debe:", "opciones": ["Esperar a ver si lo notan", "Avisar de inmediato al responsable", "Borrar el mensaje y no decir nada", "Reenviarlo a todos"], "correcta": 1, "explicacion": "El aviso inmediato permite limitar el daño." },
+        { "pregunta": "Las claves de acceso de un cliente:", "opciones": ["Se comparten por chat si hay urgencia", "Se guardan en la plataforma", "Se anotan en el escritorio", "Son personales y no se comparten por mensajes"], "correcta": 3, "explicacion": "Son credenciales personales y confidenciales." }
+      ]
+    },
+    {
+      "id": "i03",
+      "numero": 3,
+      "titulo": "Cómo verificar una norma en la fuente oficial",
+      "estado": "desarrollado",
+      "fecha_elaboracion": "2026-11-19",
+      "ultima_revision": null,
+      "sin_normativa": true,
+      "secciones": ["objetivo", "explicacion", "procedimiento", "ejemplos", "errores", "recomendaciones", "ejercicios", "evaluacion"],
+      "resumen": "Método para confirmar que una norma está vigente antes de aplicarla, usando las fuentes oficiales.",
+      "objetivo": "Aplicar un método simple para confirmar número, fechas, texto y vigencia de una norma en una fuente oficial, y dejar constancia de esa consulta.",
+      "explicacion": [
+        { "titulo": "Por qué verificar", "texto": "Las normas se modifican y pueden derogarse. Un resumen, una presentación o una publicación en redes puede estar desactualizado, aunque haya sido correcto cuando se escribió." },
+        { "titulo": "Fuentes oficiales prioritarias", "texto": "Para esta plataforma: SUNAT, SUNAFIL, Ministerio de Trabajo, El Peruano, MEF y EsSalud. Sus direcciones están en la sección «Normativa y Actualizaciones»." },
+        { "titulo": "Qué se confirma", "texto": "Número exacto de la norma, fecha de publicación, fecha de vigencia, artículos aplicables, y si fue modificada o derogada." },
+        { "titulo": "Estados de una norma", "texto": "Vigente: sigue aplicándose tal como se publicó. Modificada: algunos artículos cambiaron y debe usarse el texto actualizado. Derogada: ya no se aplica. Por verificar: nadie la ha confirmado aún." },
+        { "titulo": "Constancia de la consulta", "texto": "Anote qué fuente consultó, qué norma y artículo revisó y en qué fecha. Eso permite reproducir y justificar la conclusión." }
+      ],
+      "procedimiento": [
+        "Identifique la norma que necesita (tipo, número y año).",
+        "Ubique su texto en la fuente oficial que corresponde.",
+        "Confirme fecha de publicación, fecha de vigencia y artículos aplicables.",
+        "Revise si existen modificaciones o si fue derogada.",
+        "Anote fuente, norma, artículo y fecha de consulta en su papel de trabajo.",
+        "Si no logra verificarla, indíquelo claramente y consulte al responsable."
+      ],
+      "ejemplos": [
+        { "titulo": "Un dato visto en redes", "descripcion": "Un practicante lee en redes sociales un dato sobre un plazo. Antes de usarlo en un trabajo, busca el plazo en la fuente oficial, anota la fecha de consulta y, al no encontrarlo, lo reporta al responsable en lugar de asumirlo." }
+      ],
+      "errores": [
+        "Citar una norma de memoria, sin abrir la fuente.",
+        "Confiar en una página no oficial sin contrastarla.",
+        "No anotar la fecha en que se hizo la consulta.",
+        "Presentar como vigente una norma que no se logró verificar."
+      ],
+      "recomendaciones": [
+        "Cuando no pueda verificar una norma, dígalo expresamente en su trabajo.",
+        "Guarde el enlace oficial junto con la fecha de consulta.",
+        "Revise de nuevo las normas de uso frecuente cada cierto tiempo."
+      ],
+      "ejercicios": [
+        { "enunciado": "Enumere los cinco datos que debe confirmar de una norma antes de aplicarla.", "solucion": "Número exacto, fecha de publicación, fecha de vigencia, artículos aplicables y si fue modificada o derogada." }
+      ],
+      "evaluacion": [
+        { "pregunta": "¿Dónde se debe confirmar la vigencia de una norma?", "opciones": ["En una publicación en redes", "En la memoria", "En la fuente oficial correspondiente", "En un resumen antiguo"], "correcta": 2, "explicacion": "La fuente oficial es la referencia confiable." },
+        { "pregunta": "Si no logra verificar una norma, lo correcto es:", "opciones": ["Presentarla como vigente", "Decir que no pudo verificarse y consultar al responsable", "Inventar el artículo", "Omitir el tema"], "correcta": 1, "explicacion": "No se debe presentar como vigente lo que no se verificó." },
+        { "pregunta": "¿Qué conviene anotar al terminar la consulta?", "opciones": ["Fuente, norma, artículo y fecha de consulta", "Nada", "Solo el nombre del practicante", "Solo el número de la norma"], "correcta": 0, "explicacion": "Permite reproducir y justificar la conclusión." }
+      ]
+    },
+    {
+      "id": "i04",
+      "numero": 4,
+      "titulo": "Buenas prácticas en papeles de trabajo y comunicación",
+      "estado": "desarrollado",
+      "fecha_elaboracion": "2026-11-19",
+      "ultima_revision": null,
+      "sin_normativa": true,
+      "secciones": ["objetivo", "explicacion", "procedimiento", "ejemplos", "errores", "recomendaciones", "ejercicios", "evaluacion"],
+      "resumen": "Cómo documentar el trabajo, ordenar archivos y plantear consultas de forma clara.",
+      "objetivo": "Documentar el trabajo de modo que otra persona pueda revisarlo, ordenar los archivos y plantear consultas claras al responsable.",
+      "nota": "Es una guía general de buenas prácticas. Si el estudio tiene formatos o procedimientos propios, estos prevalecen.",
+      "explicacion": [
+        { "titulo": "Un papel de trabajo revisable", "texto": "Debe indicar quién lo preparó, de qué periodo y cliente es, la fecha, qué fuentes usó y qué conclusión alcanzó. Otra persona debe poder seguirlo sin preguntarle." },
+        { "titulo": "Sustento y referencias", "texto": "Cada cifra debe poder rastrearse a un documento fuente. Use referencias cruzadas simples entre el papel de trabajo y el sustento." },
+        { "titulo": "Orden de archivos", "texto": "Use nombres claros que incluyan periodo y tema, y conserve una sola versión vigente para evitar confusiones entre copias." },
+        { "titulo": "Cómo plantear una consulta", "texto": "Describa el caso, lo que ya revisó, la fuente consultada y la duda concreta. Una consulta clara se responde más rápido y evita errores." },
+        { "titulo": "Revisión antes de entregar", "texto": "Revise las cifras al menos dos veces, verifique que los totales cuadren y que no queden comentarios internos o datos que no corresponden." }
+      ],
+      "procedimiento": [
+        "Encabece el papel de trabajo con cliente (ficticio en capacitación), periodo, preparador y fecha.",
+        "Registre las fuentes consultadas y los documentos de sustento.",
+        "Anote la conclusión y los puntos que requieren revisión.",
+        "Nombre el archivo con periodo y tema; conserve una sola versión vigente.",
+        "Revise cifras y totales antes de entregar.",
+        "Si tiene dudas, redacte la consulta con el caso, lo revisado y la pregunta concreta."
+      ],
+      "ejemplos": [
+        { "titulo": "Una consulta bien planteada", "descripcion": "«En la conciliación de enero (caso ficticio) queda una diferencia de 150 que no logro explicar. Revisé los cheques en tránsito y el estado de cuenta. ¿Podría revisar si falta registrar una comisión?». La persona que responde ya tiene el contexto completo." }
+      ],
+      "errores": [
+        "Entregar cuadros sin indicar el periodo ni quién los preparó.",
+        "Tener varias versiones del mismo archivo sin saber cuál es la vigente.",
+        "Plantear dudas muy generales como «no me cuadra».",
+        "No guardar el sustento de una cifra."
+      ],
+      "recomendaciones": [
+        "Escriba pensando en que otra persona lo revisará.",
+        "Pida revisión antes de las fechas límite, no el último día.",
+        "Deje por escrito las decisiones importantes y quién las aprobó."
+      ],
+      "ejercicios": [
+        { "enunciado": "Reescriba la consulta «no me cuadra el banco» de modo que sea clara.", "solucion": "Indicar el periodo, el saldo del libro y del banco, la diferencia, lo que ya se revisó y la duda concreta sobre la posible causa." }
+      ],
+      "evaluacion": [
+        { "pregunta": "Un papel de trabajo revisable debe permitir que:", "opciones": ["Solo su autor lo entienda", "Otra persona lo siga sin preguntar al autor", "Se omitan las fuentes", "No se indique la fecha"], "correcta": 1, "explicacion": "Debe ser comprensible por quien lo revise." },
+        { "pregunta": "¿Qué mejora una consulta al responsable?", "opciones": ["Que sea muy breve y vaga", "Que se envíe sin contexto", "Que incluya el caso, lo revisado y la duda concreta", "Que se haga a último momento"], "correcta": 2, "explicacion": "Con contexto completo se responde más rápido." },
+        { "pregunta": "Respecto de las versiones de un archivo, conviene:", "opciones": ["Tener muchas copias iguales", "Conservar una sola versión vigente con nombre claro", "Borrar el sustento", "No poner fechas"], "correcta": 1, "explicacion": "Evita confusiones y errores por usar una copia equivocada." }
+      ]
+    }
+  ]
+}

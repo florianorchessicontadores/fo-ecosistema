@@ -2,8 +2,8 @@
   "institucion": "FLORIAN ORCHESSI & ASOCIADOS",
   "plataforma": "FO ECOSISTEMA DIGITAL",
   "subtitulo": "Conocimiento, tecnología y gestión empresarial.",
-  "version": "v1.0 · Etapa 1",
-  "fecha_version": "2026-11-18",
+  "version": "v1.1 · Etapa 2",
+  "fecha_version": "2026-11-19",
   "logo": null,
   "aprobacion_minima": 0.6,
   "bienvenida": {
@@ -11,15 +11,78 @@
     "texto": "Plataforma de conocimiento, capacitación y herramientas profesionales para practicantes y asistentes de Florian Orchessi & Asociados, firma especializada en asesoría contable, tributaria, laboral y empresarial en el Perú."
   },
   "menu": [
-    { "id": "inicio", "titulo": "Inicio", "ruta": "#/", "icono": "home", "grupo": "", "descripcion": "Panel principal de la plataforma" },
-    { "id": "contable", "titulo": "Área Contable", "ruta": "#/contable", "icono": "contable", "grupo": "Áreas profesionales", "descripcion": "Módulos de contabilidad empresarial y Contasis" },
-    { "id": "tributaria", "titulo": "Área Tributaria", "ruta": "#/tributaria", "icono": "tributaria", "grupo": "Áreas profesionales", "descripcion": "Temas de legislación y procedimientos tributarios peruanos" },
-    { "id": "laboral", "titulo": "Área Laboral", "ruta": "#/laboral", "icono": "laboral", "grupo": "Áreas profesionales", "descripcion": "Capacitación laboral y de planillas según legislación peruana" },
-    { "id": "academy", "titulo": "FO Academy", "ruta": "#/academy", "icono": "academy", "grupo": "Aprendizaje y herramientas", "descripcion": "Cursos, ruta de aprendizaje y evaluaciones" },
-    { "id": "tools", "titulo": "FO Tools", "ruta": "#/tools", "icono": "tools", "grupo": "Aprendizaje y herramientas", "descripcion": "Calculadoras y herramientas interactivas (en diseño)" },
-    { "id": "biblioteca", "titulo": "Biblioteca Profesional", "ruta": "#/biblioteca", "icono": "biblioteca", "grupo": "Consulta", "descripcion": "Manuales, formatos, checklists y guías" },
-    { "id": "normativa", "titulo": "Normativa y Actualizaciones", "ruta": "#/normativa", "icono": "normativa", "grupo": "Consulta", "descripcion": "Fuentes oficiales y catálogo de normas referenciadas" },
-    { "id": "acerca", "titulo": "Acerca de FO", "ruta": "#/acerca", "icono": "info", "grupo": "Institucional", "descripcion": "Propósito, principios y hoja de ruta de la plataforma" }
+    {
+      "id": "inicio",
+      "titulo": "Inicio",
+      "ruta": "#/",
+      "icono": "home",
+      "grupo": "",
+      "descripcion": "Panel principal de la plataforma"
+    },
+    {
+      "id": "contable",
+      "titulo": "Área Contable",
+      "ruta": "#/contable",
+      "icono": "contable",
+      "grupo": "Áreas profesionales",
+      "descripcion": "Módulos de contabilidad empresarial y Contasis"
+    },
+    {
+      "id": "tributaria",
+      "titulo": "Área Tributaria",
+      "ruta": "#/tributaria",
+      "icono": "tributaria",
+      "grupo": "Áreas profesionales",
+      "descripcion": "Temas de legislación y procedimientos tributarios peruanos"
+    },
+    {
+      "id": "laboral",
+      "titulo": "Área Laboral",
+      "ruta": "#/laboral",
+      "icono": "laboral",
+      "grupo": "Áreas profesionales",
+      "descripcion": "Capacitación laboral y de planillas según legislación peruana"
+    },
+    {
+      "id": "academy",
+      "titulo": "FO Academy",
+      "ruta": "#/academy",
+      "icono": "academy",
+      "grupo": "Aprendizaje y herramientas",
+      "descripcion": "Cursos, ruta de aprendizaje y evaluaciones"
+    },
+    {
+      "id": "tools",
+      "titulo": "FO Tools",
+      "ruta": "#/tools",
+      "icono": "tools",
+      "grupo": "Aprendizaje y herramientas",
+      "descripcion": "Calculadoras y herramientas interactivas (en diseño)"
+    },
+    {
+      "id": "biblioteca",
+      "titulo": "Biblioteca Profesional",
+      "ruta": "#/biblioteca",
+      "icono": "biblioteca",
+      "grupo": "Consulta",
+      "descripcion": "Manuales, formatos, checklists y guías"
+    },
+    {
+      "id": "normativa",
+      "titulo": "Normativa y Actualizaciones",
+      "ruta": "#/normativa",
+      "icono": "normativa",
+      "grupo": "Consulta",
+      "descripcion": "Fuentes oficiales y catálogo de normas referenciadas"
+    },
+    {
+      "id": "acerca",
+      "titulo": "Acerca de FO",
+      "ruta": "#/acerca",
+      "icono": "info",
+      "grupo": "Institucional",
+      "descripcion": "Propósito, principios y hoja de ruta de la plataforma"
+    }
   ],
   "areas": [
     {
@@ -48,11 +111,36 @@
     }
   ],
   "etapas": [
-    { "numero": 1, "titulo": "Estructura principal y áreas profesionales", "estado": "completada", "descripcion": "Diseño institucional, menú, panel de inicio y las áreas Contable, Tributaria y Laboral." },
-    { "numero": 2, "titulo": "FO Academy", "estado": "preparada", "descripcion": "Ruta de aprendizaje, seguimiento local y evaluaciones ya operativos; faltan cursos completos y más evaluaciones." },
-    { "numero": 3, "titulo": "FO Tools", "estado": "preparada", "descripcion": "Fichas de diseño de las ocho herramientas; las calculadoras se programan al verificar los parámetros legales vigentes." },
-    { "numero": 4, "titulo": "Biblioteca Profesional y Normativa y Actualizaciones", "estado": "preparada", "descripcion": "Estructura, catálogo de normas y proceso de revisión listos; falta incorporar documentos y verificar normas." },
-    { "numero": 5, "titulo": "Integraciones con sistemas internos y API de SUNAT", "estado": "pendiente", "descripcion": "Solo preparada la arquitectura (datos separados del código). Requiere backend y gestión segura de credenciales." }
+    {
+      "numero": 1,
+      "titulo": "Estructura principal y áreas profesionales",
+      "estado": "completada",
+      "descripcion": "Diseño institucional, menú, panel de inicio y las áreas Contable, Tributaria y Laboral."
+    },
+    {
+      "numero": 2,
+      "titulo": "FO Academy",
+      "estado": "completada",
+      "descripcion": "Cursos por área con niveles progresivos, curso de inducción, evaluaciones por fase, resultados y recomendaciones personalizadas. El contenido de los cursos crece a medida que se desarrollan los módulos pendientes."
+    },
+    {
+      "numero": 3,
+      "titulo": "FO Tools",
+      "estado": "preparada",
+      "descripcion": "Fichas de diseño de las ocho herramientas; las calculadoras se programan al verificar los parámetros legales vigentes."
+    },
+    {
+      "numero": 4,
+      "titulo": "Biblioteca Profesional y Normativa y Actualizaciones",
+      "estado": "preparada",
+      "descripcion": "Estructura, catálogo de normas y proceso de revisión listos; falta incorporar documentos y verificar normas."
+    },
+    {
+      "numero": 5,
+      "titulo": "Integraciones con sistemas internos y API de SUNAT",
+      "estado": "pendiente",
+      "descripcion": "Solo preparada la arquitectura (datos separados del código). Requiere backend y gestión segura de credenciales."
+    }
   ],
   "acerca": {
     "resumen": "FO Ecosistema Digital es la plataforma institucional de Florian Orchessi & Asociados para capacitar a su equipo, consultar procedimientos profesionales y, más adelante, utilizar herramientas interactivas.",

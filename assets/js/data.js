@@ -21,11 +21,12 @@ export async function loadAll() {
   DB.site = await fetchJSON('data/site.json');
 
   const areaIds = DB.site.areas.map((a) => a.id);
-  const [normativa, academy, tools, biblioteca, ...areas] = await Promise.all([
+  const [normativa, academy, tools, biblioteca, induccion, ...areas] = await Promise.all([
     fetchJSON('data/normativa.json'),
     fetchJSON('data/academy.json'),
     fetchJSON('data/tools.json'),
     fetchJSON('data/biblioteca.json'),
+    fetchJSON('data/induccion.json'),
     ...areaIds.map((id) => fetchJSON(`data/${id}.json`)),
   ]);
 
@@ -33,6 +34,16 @@ export async function loadAll() {
   DB.academy = academy;
   DB.tools = tools;
   DB.biblioteca = biblioteca;
+
+  // Curso de inducción: sus lecciones se registran como "área" academy
+  // para reutilizar la misma pantalla de detalle, progreso y evaluación.
+  DB.areaMeta.academy = { id: 'academy', titulo: 'FO Academy · Inducción', corto: 'Inducción', etiqueta_item: 'Lección', icono: 'academy' };
+  DB.areaContent.academy = induccion;
+  (induccion.items || []).forEach((it) => {
+    it.area = 'academy';
+    it.ruta = `#/academy/${it.id}`;
+    DB.items.set(it.id, it);
+  });
 
   DB.site.areas.forEach((meta, i) => {
     DB.areaMeta[meta.id] = meta;
